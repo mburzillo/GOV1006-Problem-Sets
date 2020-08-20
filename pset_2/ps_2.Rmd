@@ -1,0 +1,208 @@
+---
+title: "GOV 1006 Problem Set #2"
+author: "Maria Burzillo"
+date: "2/10/2020"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(tidyverse)
+library(gridExtra)
+```
+
+
+# **Question #1**
+
+## a) Measures that have validity, but not reliability
+
+An example of a measure that has a high level of validity but not of reliability would be a survey on a typical school night that asks students to report the number of hours of sleep they got the previous night to gauge how much sleep a Harvard student gets on average. In general, this would be a valid measuring process of the number of hours of sleep a student gets on a typical night; however, it would have low reliability because random factors such as who was up all night studying for a midterm and who simply couldn't sleep the night before would affect the percision and stability of the measure if it was to be reproduced or if the same students were to be tested again. 
+
+
+## b) Measures that have reliability, but not validity
+
+An example of a measure that has a high level of reliability but not validity would be a heart rate monitor at the MAC that is incorrectly calibrated so that it consistently reports an exerciser's heart rate at 10 beats per minute above their actual heart rate. Because it's measures of heart rate are precise and stable and reflect actual differences in the heart rate of different exercisers rather than measurement errors, the heart rate monitor is reliable. However, becuase it is not an accurate reflection of a person's actual heartrate (being 10bpm off), it is therefore not valid. 
+
+
+## c) A Harvard Specific Policy: validity, reliability, and sample selection
+
+I was once asked to fill out a survey regarding inclusivity in Harvard's math department, specifically related to gender equality. The first potential issue with this survey was that it likely collected responses from a nonrepresentative sample of the Harvard population. For example, it likely garnered responses only from those who had strong opinions and were willing to take the time to fill out the survey, which would likely bias the results one way or the other. 
+
+In terms of validity, the survey was not likely highly valid because the questions it asked such as how many female professors a student had had at Harvard in the math department was not likely a very good measure of overall inclusivity. However, the survey was likely reliable because the differences in the responses would be due to real differences in survey respondents rather than errors from measurements. 
+
+# **Question #2**
+
+```{r import_file, message=FALSE, include=FALSE}
+
+# Import data
+
+all_seasons <- read_csv("all_seasons.csv")
+
+# I put message = false because it was coercing the column names and types. There
+# was not a deeper problem.
+
+```
+
+
+```{r data_cleaning, include = FALSE}
+
+# Clean the data so that year is made numeric and contains the starting year of
+# the season and so that height it converted to feet to make interpretation
+# easier for the reader. The years from the desired year range are also filtered
+# out of the data. I decided not to only keep unique names because this would
+# only count a player that played every year from 2006 to 2016 once in the
+# distribution, and I wanted the distribution and analysis to accurately reflect
+# the player height distribution of every year within the designated period.
+
+seasons_06_16 <- all_seasons %>%
+  separate(season, into = c("year_char", "drop_it"), sep = "-") %>%
+  select(-drop_it) %>%
+  mutate(year = as.numeric(year_char), 
+         player_height_ft = player_height * 0.0328084) %>%
+  filter(year < 2017 & year > 2005)
+
+
+```
+
+
+## a)
+
+```{r graphics, echo=FALSE}
+
+# Create a histogram of the distribution and set the bindwidth equal to one inch
+# (1/12 of a foot)
+
+seasons_06_16 %>%
+  ggplot() +
+  geom_histogram(aes(x = player_height_ft), binwidth = 1/12, 
+                 fill = "blue", color = "red") +
+  xlab("Player's Height in Feet") +
+  ylab("Number of Players") +
+  ggtitle("Distribution of NBA Players' Heights, 2006-2016") +
+  theme_bw()
+
+
+```
+
+## b)
+
+```{r b, include=FALSE}
+
+# calculate the mean
+
+players_mean <- round(mean(seasons_06_16$player_height_ft),2)
+```
+The mean of the distribution is `r players_mean` feet. 
+
+## c)
+
+```{r c, include=FALSE}
+
+# calculate the variance
+
+players_variance <- round(var(seasons_06_16$player_height_ft), 3)
+players_variance
+
+```
+
+The variance of the distribution is the mean of the squarred difference from the mean. This essentially means that the variance represents the spread of the data from the mean. In our data set, the variance is very low at `r players_variance`. Thus, there is a relatively low spread of the values, and most are clustered around the mean of `r players_mean` feet. It would probably be better to look at the spread of the data in terms of standard deviation, though, since it is often easier to interpret as it is on the original scale of the distribution. 
+
+
+## d)
+```{r d, include=FALSE}
+
+# calculate the standard error
+
+standard_error <- round(sd(seasons_06_16$player_height_ft)/sqrt(length(seasons_06_16$player_height_ft)), 4)
+standard_error
+
+```
+The standard error is the estimated standard deviation of an estimate. In this case, the standard error represents the estimated standard deviation of our estimate for NBA Basketball players's heights, or the mean of our distribution. Because the number is very low at `r standard_error`, this suggests that our mean estimate has a relatively low level of uncertainty and is therefore likely a good estimate of the true mean of the population of NBA players. The standard error is what we would expect the entire population's standard deviation to be. 
+
+# **Question #3**
+
+```{r download_health_data, include = FALSE}
+
+# download the data taken from the cdc website
+
+sids_data <- read.delim("/Users/mariaburzillo/Desktop/GOV1006/ps-2-release-mburzillo/Underlying Cause of Death, 1999-2017 (2).txt") 
+
+```
+
+```{r data_cleaning_3, include = FALSE}
+
+# Get rid of the last 75 or so rows that contained notes about the dataset and
+# not acutal data. Choose to keep death rates labeled "unreliable" in the
+# original data because data was only classified as unreliable if there were
+# fewer than 20 deaths. Since SIDS is relatively rare, this low of a death rate
+# is not necessarily a flag of a problem, and excluding observations based on
+# this metric is thus likely more problematic than including them without more
+# information. For examples, this excludes almost all data for Asian or Pacific
+# Islanders.
+
+all_sids_data <- sids_data %>%
+  slice(1:1088)
+
+```
+
+```{r graphics_3, echo=FALSE}
+
+# group data by year to create a graphic of total deaths/100,000 in the
+# population over time for SIDS in the US.
+
+total_death_rate <- all_sids_data %>%
+  group_by(Year) %>%
+  summarise(tot_deaths = sum(Deaths, na.rm = T), 
+            tot_pop = sum(Population,na.rm = T),
+            death_rate = tot_deaths/tot_pop * 100000) %>%
+  ggplot(aes(x = Year, y = death_rate)) +
+  geom_line() +
+  geom_point() +
+  ggtitle("Sudden Infant Death Syndrome Deaths per 100,000 in the U.S., 2006-2016") +
+  ylab("Deaths per 100,000 People in the Population") +
+  theme_bw()
+total_death_rate
+
+# Create the same graph but this time group the data by year and race. Filter
+# out race corresponding to Native American and Alsaka Native because there are
+# only two years with observations.
+
+death_by_race <- all_sids_data %>%
+  filter(!(is.na(Race)), Race != "American Indian or Alaska Native") %>%
+  group_by(Year, Race) %>%
+  summarise(tot_deaths = sum(Deaths, na.rm = T), 
+            tot_pop = sum(Population,na.rm = T),
+            death_rate = tot_deaths/tot_pop * 100000) %>%
+  ggplot(aes(x = Year, y = death_rate, color = Race)) +
+  geom_line() +
+  geom_point() +
+  ggtitle("Sudden Infant Death Syndrome Rates per 100,000 Population by Race, 2006-2016") +
+  ylab("Deaths per 100,000 People in Population") +
+  theme_bw()
+death_by_race
+
+# Create the same graph but this time group the data by year and Region
+
+death_by_region <- all_sids_data %>%
+  filter(!(is.na(Census.Region))) %>%
+  group_by(Year, Census.Region) %>%
+  summarise(tot_deaths = sum(Deaths, na.rm = T), 
+            tot_pop = sum(Population,na.rm = T),
+            death_rate = tot_deaths/tot_pop * 100000) %>%
+  ggplot(aes(x = Year, y = death_rate, color =  Census.Region)) +
+  geom_line() +
+  geom_point() +
+  ggtitle("Sudden Infant Death Syndrome Rates per 100,000 Population\nby Region, 2006-2016") +
+  ylab("Deaths per 100,000 People in Population") +
+  theme_bw() +
+  labs(color = "Census Region")
+death_by_region
+
+
+```
+
+By breaking down the time series data on Sudden Infant Death Syndrome (SIDS) death rates, it is interesting to see how the overall decline in the SIDS death rate is not distributed equally across various demographics. For example, declines among the African American population have been much more significant than declines for either Asian or Pacific Islanders or Whites. Nevertheless, the larger decline in death rates for African Americans has not led to the elimination of racial disparities in death rates by any means. In terms of regional trends, all regions appear to have experienced declines in the SIDS death rates. Rates have declined the most in the South and the Midwest, where they were highest to begin with. 
+
+# Collaborators:
+Feven and Cris

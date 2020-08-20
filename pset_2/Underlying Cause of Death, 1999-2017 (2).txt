@@ -1,0 +1,1158 @@
+"Notes"	"Census Region"	"Census Region Code"	"State"	"State Code"	"Single-Year Ages"	"Single-Year Ages Code"	"Race"	"Race Code"	"Year"	"Year Code"	Deaths	Population	Crude Rate
+	"Census Region 1: Northeast"	"CENS-R1"	"Connecticut"	"09"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	12	5837	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Connecticut"	"09"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	17	34756	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Connecticut"	"09"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	15	34688	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Connecticut"	"09"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	15	35090	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Connecticut"	"09"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	11	34174	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Connecticut"	"09"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	11	33559	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Connecticut"	"09"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	10	31756	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Connecticut"	"09"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	16	31704	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Connecticut"	"09"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	13	30613	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Connecticut"	"09"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	15	29222	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Connecticut"	"09"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	12	28441	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Connecticut"	"09"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	13	28295	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Maine"	"23"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	11	12059	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	10	9380	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	20	65956	30.3
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	15	66394	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	17	66183	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	23	63103	36.4
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	27	61541	43.9
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	14	59211	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	21	59017	35.6
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	26	58953	44.1
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	15	57878	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	24	57369	41.8
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	24	56921	42.2
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	17	58277	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	10	57566	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Massachusetts"	"25"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	10	56062	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Hampshire"	"33"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	15	13954	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Hampshire"	"33"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	11	12846	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	18	19551	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	23	19615	117.3
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	32	20906	153.1
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	19	20283	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	22	20630	106.6
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	10	19899	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	30	18790	159.7
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	19	19222	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	24	19948	120.3
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	24	19809	121.2
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	15	19293	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	30	20428	146.9
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	11	20113	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	10	19973	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	13	19969	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	15	19529	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	26	19421	133.9
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	26	82302	31.6
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	36	82186	43.8
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	25	80868	30.9
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	22	81864	26.9
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	15	83274	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	11	83455	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	15	79280	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	14	76091	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	21	77344	27.2
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	22	76374	28.8
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	11	74060	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	22	73407	30.0
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	19	72743	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	12	73213	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	18	72072	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	30	72164	41.6
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	14	71213	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New Jersey"	"34"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	18	71082	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	32	52720	60.7
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	27	53310	50.6
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	27	55761	48.4
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	15	51800	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	19	48936	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	21	51679	40.6
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	20	52685	38.0
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	30	50600	59.3
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	20	49301	40.6
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	17	49610	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	16	58142	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	21	56239	37.3
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	16	56411	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	11	54813	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	45	173521	25.9
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	40	172935	23.1
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	36	177060	20.3
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	26	175147	14.8
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	14	175908	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	13	175680	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	13	164872	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	43	163480	26.3
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	45	167193	26.9
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	46	167857	27.4
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	36	165094	21.8
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	29	160214	18.1
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	26	159695	16.3
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	20	157080	12.7
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	17	158417	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	19	158026	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	15	157350	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	10	154080	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"New York"	"36"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	10	154918	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	40	20563	194.5
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	51	21050	242.3
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	44	21867	201.2
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	29	21744	133.4
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	21	22475	93.4
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	29	24476	118.5
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	15	25004	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	29	28006	103.5
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	26	28708	90.6
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	29	27063	107.2
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	31	24798	125.0
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	12	23754	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	16	23234	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	11	23537	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	12	23529	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	21	23454	89.5
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	20	23255	86.0
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	14	22864	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	67	116570	57.5
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	50	116577	42.9
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	36	118420	30.4
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	45	114844	39.2
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	51	114724	44.5
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	51	113472	44.9
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	46	110906	41.5
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	45	112080	40.1
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	54	112698	47.9
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	56	111194	50.4
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	62	110614	56.1
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	42	110547	38.0
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	38	112541	33.8
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	46	111269	41.3
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	32	112321	28.5
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	31	111473	27.8
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	44	111665	39.4
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	31	110393	28.1
+	"Census Region 1: Northeast"	"CENS-R1"	"Pennsylvania"	"42"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	39	108645	35.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	57	31863	178.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	58	32039	181.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	55	33814	162.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	38	32285	117.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	43	31058	138.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	58	31034	186.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	41	30179	135.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	30	30309	99.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	23	31207	73.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	35	30801	113.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	20	29977	66.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	32	29507	108.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	34	29643	114.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	31	28670	108.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	12	27932	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	10	27147	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	10	27146	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	47	134127	35.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	49	133695	36.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	44	139768	31.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	39	135929	28.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	39	135034	28.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	46	135407	34.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	50	130970	38.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	52	129304	40.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	31	130410	23.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	45	127193	35.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	36	124155	29.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	31	122504	25.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	27	125146	21.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	30	121852	24.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	23	119255	19.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	16	117736	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	12	115728	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Illinois"	"17"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	13	115864	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	11	9979	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	12	10350	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	11	10358	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	14	12436	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	12	12261	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	12	11773	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	12	11660	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	11	11746	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	12	11845	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	16	11570	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	43	72716	59.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	45	72742	61.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	42	75125	55.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	33	71962	45.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	31	72454	42.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	32	73917	43.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	43	72427	59.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	48	73572	65.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	34	74382	45.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	38	73636	51.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	48	70822	67.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	22	69663	31.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	39	69991	55.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	35	68877	50.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	39	68835	56.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	34	68570	49.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	21	69091	30.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	30	69047	43.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Indiana"	"18"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	37	68118	54.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	52	23986	216.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	45	24610	182.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	46	24782	185.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	32	23389	136.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	15	23076	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	19	23421	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	18	22989	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	16	23303	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	12	23783	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	11	23305	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	16	23532	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	10	23716	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	12	23649	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	14	23354	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	17	22853	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	10	22706	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	66	101749	64.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	51	101755	50.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	47	104542	45.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	51	101447	50.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	32	99987	32.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	31	100421	30.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	27	97024	27.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	34	95952	35.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	32	94334	33.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	36	91198	39.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	28	86832	32.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	34	85849	39.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	23	84237	27.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	23	84448	27.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	27	84121	32.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	18	85350	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	26	85446	30.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Michigan"	"26"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	18	83486	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	38	23661	160.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	35	24249	144.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	22	24711	89.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	39	23978	162.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	22	24283	90.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	38	25267	150.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	20	25782	77.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	31	26864	115.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	22	28718	76.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	38	28476	133.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	29	27800	104.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	49	26317	186.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	31	24904	124.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	31	23965	129.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	29	24390	118.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	32	24787	129.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	33	25171	131.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	29	24957	116.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	34	24885	136.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	73	121882	59.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	78	121424	64.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	70	124763	56.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	65	119076	54.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	52	118315	44.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	68	118383	57.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	61	114409	53.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	68	114975	59.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	71	115277	61.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	43	113094	38.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	49	110619	44.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	59	108935	54.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	61	110491	55.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	51	106464	47.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	61	107261	56.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	39	108091	36.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	53	109528	48.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	45	108267	41.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Ohio"	"39"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	33	107186	30.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	18	6531	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	24	6897	348.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	27	7484	360.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	18	7503	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	12	7486	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	19	7753	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	12	7939	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	12	8407	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	22	9094	241.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	15	8995	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	10	8775	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	10	7312	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	14	7238	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	12	7041	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	10	6991	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	36	56681	63.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	33	57700	57.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	41	57908	70.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	22	57404	38.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	21	57899	36.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	32	58422	54.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	22	57402	38.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	18	57681	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	25	59060	42.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	25	58188	43.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	16	57646	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	26	57197	45.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	22	58382	37.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	13	56947	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	11	56072	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	10	55339	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Wisconsin"	"55"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	11	55051	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	40	34635	115.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	29	34748	83.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	31	34973	88.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	24	34089	70.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	24	34845	68.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	13	34582	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	23	34686	66.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	22	36218	60.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	35	36647	95.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	29	36316	79.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	27	35676	75.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	29	35275	82.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	19	34728	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	15	34356	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	13	34521	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	16	34829	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	18	35442	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	23	35359	65.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Iowa"	"19"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	14	34749	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	12	3236	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	10	3439	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	15	3478	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	14	3555	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	16	3816	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	14	4113	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	11	4103	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	32	33150	96.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	36	33110	108.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	28	33679	83.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	37	33304	111.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	32	33715	94.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	26	33562	77.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	30	33335	90.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	34	33832	100.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	36	35150	102.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	31	35290	87.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	22	35005	62.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	20	34691	57.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	25	33489	74.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	20	33601	59.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	27	33262	81.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	11	33435	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	11	32655	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	19	32025	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Kansas"	"20"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	12	31956	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	10	8810	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	31	55766	55.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	29	55846	51.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	23	57568	40.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	19	55308	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	17	56420	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	20	56482	35.4
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	34	54372	62.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	26	55020	47.3
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	21	55762	37.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	30	54569	55.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	30	54940	54.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	22	55535	39.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	21	56834	36.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	16	55936	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Minnesota"	"27"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	10	56581	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	21	10631	197.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	19	10886	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	24	11585	207.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	11	11723	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	14	12097	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	11	12206	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	12	12640	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	36	60499	59.5
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	46	60424	76.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	37	61466	60.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	47	61076	77.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	38	61168	62.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	33	62234	53.0
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	41	62054	66.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	41	63172	64.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	25	64431	38.8
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	32	63929	50.1
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	34	62193	54.7
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	30	61401	48.9
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	18	59839	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	14	59150	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	16	59651	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	15	59352	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	17	59873	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	14	59361	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Missouri"	"29"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	15	58862	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	20	20916	95.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	18	21061	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	18	21650	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	14	21836	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	18	22445	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	14	22685	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	22	22096	99.6
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	14	21977	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	14	22223	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	18	22596	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	12	22646	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	11	22547	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	18	22822	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	11	22412	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	16	22554	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	13	22848	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	17	23114	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"Nebraska"	"31"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	14	22859	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"South Dakota"	"46"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	14	8313	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Delaware"	"10"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	10	3397	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Delaware"	"10"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	11	7485	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	40	41971	95.3
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	27	42052	64.2
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	43	48590	88.5
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	36	47524	75.8
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	32	47284	67.7
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	30	49918	60.1
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	26	56496	46.0
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	29	57099	50.8
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	38	57111	66.5
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	34	58218	58.4
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	27	54301	49.7
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	28	51391	54.5
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	24	49724	48.3
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	32	50173	63.8
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	24	50357	47.7
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	25	50252	49.7
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	26	51977	50.0
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	33	51795	63.7
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	33	52128	63.3
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	64	141015	45.4
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	67	139947	47.9
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	57	149531	38.1
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	55	149805	36.7
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	60	150879	39.8
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	48	152788	31.4
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	62	151693	40.9
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	67	156343	42.9
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	42	159548	26.3
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	43	155567	27.6
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	43	149034	28.9
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	38	149266	25.5
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	30	154883	19.4
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	27	153234	17.6
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	25	156214	16.0
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	32	155597	20.6
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	35	160099	21.9
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	32	163512	19.6
+	"Census Region 3: South"	"CENS-R3"	"Florida"	"12"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	31	164272	18.9
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	62	40237	154.1
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	71	41025	173.1
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	53	43292	122.4
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	59	41886	140.9
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	57	41238	138.2
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	60	41988	142.9
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	57	42422	134.4
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	78	45405	171.8
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	84	47785	175.8
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	55	48547	113.3
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	52	48267	107.7
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	67	47871	140.0
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	71	49024	144.8
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	45	49085	91.7
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	44	49733	88.5
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	56	49252	113.7
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	66	49984	132.0
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	60	50222	119.5
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	65	49911	130.2
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	54	76698	70.4
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	45	76574	58.8
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	61	85817	71.1
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	79	84371	93.6
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	52	84874	61.3
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	67	86946	77.1
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	74	87640	84.4
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	77	88169	87.3
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	64	90816	70.5
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	66	87114	75.8
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	49	79511	61.6
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	55	79149	69.5
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	59	78371	75.3
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	51	77344	65.9
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	45	75515	59.6
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	44	73406	59.9
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	43	73853	58.2
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	39	73870	52.8
+	"Census Region 3: South"	"CENS-R3"	"Georgia"	"13"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	45	73806	61.0
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	32	23774	134.6
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	25	23817	105.0
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	32	24457	130.8
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	36	24349	147.9
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	34	24794	137.1
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	42	25695	163.5
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	34	26238	129.6
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	37	27094	136.6
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	39	28183	138.4
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	47	27086	173.5
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	41	26138	156.9
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	33	25681	128.5
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	32	25695	124.5
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	27	25324	106.6
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	31	25599	121.1
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	25	25694	97.3
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	39	25649	152.1
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	29	25412	114.1
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	33	25256	130.7
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	26	42658	60.9
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	24	42418	56.6
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	21	44698	47.0
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	20	44498	44.9
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	22	43926	50.1
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	23	43432	53.0
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	25	42365	59.0
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	28	41532	67.4
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	20	42370	47.2
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	26	42515	61.2
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	21	41756	50.3
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	12	40447	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	23	41783	55.0
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	21	41122	51.1
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	15	41877	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	24	41631	57.6
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	23	41504	55.4
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	17	41407	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Maryland"	"24"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	20	41348	48.4
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	40	28061	142.5
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	46	28524	161.3
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	39	28821	135.3
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	30	28150	106.6
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	42	27093	155.0
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	44	27218	161.7
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	33	28094	117.5
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	40	29301	136.5
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	38	30847	123.2
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	56	31284	179.0
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	48	32369	148.3
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	22	32552	67.6
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	13	33576	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	59	77971	75.7
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	45	77995	57.7
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	63	85541	73.6
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	46	83524	55.1
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	55	83705	65.7
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	56	84986	65.9
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	68	86534	78.6
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	54	88228	61.2
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	57	91118	62.6
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	80	90827	88.1
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	45	86109	52.3
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	28	84107	33.3
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	37	81742	45.3
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	19	80663	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	16	80193	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	19	80276	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"North Carolina"	"37"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	13	80757	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	24	18801	127.7
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	20	19100	104.7
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	18	19289	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	12	18458	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	18	17785	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	12	18556	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	23	19334	119.0
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	19	20349	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	20	21269	94.0
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	25	21472	116.4
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	17	21151	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	28	20561	136.2
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	23	20644	111.4
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	22	19974	110.1
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	16	19887	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	16	19921	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	14	19969	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	12	19601	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	14	19476	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	27	33930	79.6
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	16	33981	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	18	35641	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	19	35588	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	14	35634	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	16	35905	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	24	35533	67.5
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	21	37100	56.6
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	26	39525	65.8
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	32	39863	80.3
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	26	38066	68.3
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	21	36953	56.8
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	22	37223	59.1
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	11	36045	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	19	35983	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	14	35924	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	13	36380	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	15	36967	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"South Carolina"	"45"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	14	36578	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	19	21944	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	33	22272	148.2
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	32	22612	141.5
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	27	22025	122.6
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	35	22258	157.2
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	29	22456	129.1
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	26	22274	116.7
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	36	22769	158.1
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	31	23700	130.8
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	25	22950	108.9
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	34	23061	147.4
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	29	23880	121.4
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	27	25978	103.9
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	24	25542	94.0
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	25	25786	97.0
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	24	25730	93.3
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	22	25706	85.6
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	31	25176	123.1
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	26	25056	103.8
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	36	65653	54.8
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	29	65831	44.1
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	44	70252	62.6
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	44	70054	62.8
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	35	69822	50.1
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	50	72097	69.4
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	51	71897	70.9
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	38	72416	52.5
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	51	73340	69.5
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	34	72716	46.8
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	44	69288	63.5
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	27	68183	39.6
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	30	67195	44.6
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	29	67027	43.3
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	25	68381	36.6
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	25	68441	36.5
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	36	68457	52.6
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	40	67644	59.1
+	"Census Region 3: South"	"CENS-R3"	"Virginia"	"51"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	31	67661	45.8
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	21	19069	110.1
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	20	19004	105.2
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	23	19459	118.2
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	20	19447	102.8
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	29	19609	147.9
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	18	20087	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	35	19838	176.4
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	19	20748	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	23	20826	110.4
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	24	18879	127.1
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	20	18977	105.4
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	16	18758	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	19	18883	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	15	18863	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	13	19154	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"West Virginia"	"54"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	18	18181	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	22	18571	118.5
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	21	18758	112.0
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	13	18207	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	12	17238	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	12	17574	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	11	17279	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	16	18626	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	24	19250	124.7
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	24	19536	122.9
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	20	19504	102.5
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	15	20207	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	19	20909	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	12	19897	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	30	19769	151.8
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	43	19886	216.2
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	22	19898	110.6
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	16	19513	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	34	39526	86.0
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	29	39488	73.4
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	25	41232	60.6
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	22	39989	55.0
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	13	40363	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	11	41089	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	20	41749	47.9
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	36	43088	83.5
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	35	43352	80.7
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	35	40898	85.6
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	25	39108	63.9
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	26	37472	69.4
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	23	37971	60.6
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	24	36932	65.0
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	30	36513	82.2
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	21	36559	57.4
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	27	36748	73.5
+	"Census Region 3: South"	"CENS-R3"	"Alabama"	"01"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	23	36827	62.5
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	13	5568	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	14	6039	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	13	6439	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	13	6372	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	12	6477	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	11	6374	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	10	6304	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	13	6362	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	30	46956	63.9
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	36	47004	76.6
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	29	48442	59.9
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	35	47071	74.4
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	50	47592	105.1
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	46	48464	94.9
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	52	48512	107.2
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	55	49104	112.0
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	44	50446	87.2
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	40	50477	79.2
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	49	48494	101.0
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	51	47720	106.9
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	43	48424	88.8
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	37	47783	77.4
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	44	46915	93.8
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	48	47339	101.4
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	47	47872	98.2
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	38	47208	80.5
+	"Census Region 3: South"	"CENS-R3"	"Kentucky"	"21"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	25	47062	53.1
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	38	18449	206.0
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	41	18448	222.2
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	25	18632	134.2
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	28	17554	159.5
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	58	17316	335.0
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	39	17493	222.9
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	43	17361	247.7
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	41	18135	226.1
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	29	19427	149.3
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	26	19253	135.0
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	25	18328	136.4
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	24	18041	133.0
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	21	18857	111.4
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	11	18685	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	12	18164	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	10	17716	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	29	22268	130.2
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	23	22235	103.4
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	29	23235	124.8
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	25	22382	111.7
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	35	23007	152.1
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	32	23593	135.6
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	47	23626	198.9
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	26	22768	114.2
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	28	24762	113.1
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	28	24728	113.2
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	21	22673	92.6
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	20	21435	93.3
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	21	20351	103.2
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	12	20178	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Mississippi"	"28"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	13	19998	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	38	16019	237.2
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	37	16223	228.1
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	28	16864	166.0
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	31	16478	188.1
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	26	16233	160.2
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	32	16814	190.3
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	26	17486	148.7
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	21	18028	116.5
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	25	18222	137.2
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	18	18430	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	18	17972	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	11	18294	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	10	18145	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	10	18323	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	16	17968	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	15	17922	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	50	57577	86.8
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	61	57613	105.9
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	35	60054	58.3
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	45	58324	77.2
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	40	58917	67.9
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	47	59281	79.3
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	56	58511	95.7
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	35	60427	57.9
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	44	61882	71.1
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	29	62660	46.3
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	31	59656	52.0
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	28	59076	47.4
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	18	59201	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	17	58700	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	12	58973	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	10	59054	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	12	59988	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	29	60691	47.8
+	"Census Region 3: South"	"CENS-R3"	"Tennessee"	"47"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	17	60678	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	15	7554	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	12	7827	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	19	7230	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	13	7432	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	15	7743	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	18	7972	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	24	7984	300.6
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	17	7990	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	13	8312	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	13	8182	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	17	8169	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	16	8084	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	21	8066	260.4
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	21	7914	265.4
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	13	8010	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	12	27787	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	16	27764	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	15	28361	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	15	28836	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	16	28758	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	21	29534	71.1
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	33	30182	109.3
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	32	30957	103.4
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	44	31627	139.1
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	31	31644	98.0
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	44	29768	147.8
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	44	29091	151.2
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	37	28275	130.9
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	42	28298	148.4
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	32	28721	111.4
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	41	28396	144.4
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	41	28233	145.2
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	41	28362	144.6
+	"Census Region 3: South"	"CENS-R3"	"Arkansas"	"05"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	13	28545	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	28	25878	108.2
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	29	25930	111.8
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	34	26772	127.0
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	29	26259	110.4
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	38	25106	151.4
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	29	25604	113.3
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	42	25859	162.4
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	33	19052	173.2
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	43	24758	173.7
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	51	26083	195.5
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	34	25054	135.7
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	26	24427	106.4
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	19	24865	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	22	24623	89.3
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	21	23738	88.5
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	27	23937	112.8
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	30	24197	124.0
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	22	23805	92.4
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	19	23736	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	33	37284	88.5
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	25	36863	67.8
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	31	37112	83.5
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	33	36674	90.0
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	31	36990	83.8
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	37	37317	99.2
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	36	36944	97.4
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	23	31868	72.2
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	40	38159	104.8
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	51	38878	131.2
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	45	36732	122.5
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	28	35691	78.5
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	23	36550	62.9
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	22	36096	60.9
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	28	35491	78.9
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	19	35805	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	16	36670	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	13	36761	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Louisiana"	"22"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	19	36868	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"American Indian or Alaska Native"	"1002-5"	"2015"	"2015"	14	6843	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	10	5264	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	11	5432	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	11	6873	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	11	6978	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	12	6820	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	36	35371	101.8
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	39	35066	111.2
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	25	36389	68.7
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	32	36900	86.7
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	29	36849	78.7
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	27	36710	73.5
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	20	36986	54.1
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	17	37336	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	21	38480	54.6
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	10	38194	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	19	38163	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	17	37059	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	28	38068	73.6
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	34	36932	92.1
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	21	37317	56.3
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	32	37654	85.0
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	25	38315	65.2
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	28	37446	74.8
+	"Census Region 3: South"	"CENS-R3"	"Oklahoma"	"40"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	29	37007	78.4
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	58	41634	139.3
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	65	41951	154.9
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	42	43817	95.9
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	42	43872	95.7
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	54	44012	122.7
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	56	43903	127.6
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	59	45115	130.8
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	68	49701	136.8
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	55	50777	108.3
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	38	50757	74.9
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	62	51551	120.3
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	67	51370	130.4
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	47	53819	87.3
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	49	52829	92.8
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	35	53259	65.7
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	45	54377	82.8
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	45	56248	80.0
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	40	57522	69.5
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	34	57341	59.3
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	152	278953	54.5
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	161	275994	58.3
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	128	303280	42.2
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	163	303086	53.8
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	146	307219	47.5
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	148	309996	47.7
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	154	309826	49.7
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	161	312243	51.6
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	200	316019	63.3
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	146	318894	45.8
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	144	312874	46.0
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	153	307363	49.8
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	132	321788	41.0
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	121	311854	38.8
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	106	307430	34.5
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	140	310330	45.1
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	118	319359	36.9
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	90	323186	27.8
+	"Census Region 3: South"	"CENS-R3"	"Texas"	"48"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	90	321323	28.0
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	10	6067	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	26	66588	39.0
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	28	66285	42.2
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	25	71685	34.9
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	29	71765	40.4
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	28	72810	38.5
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	25	73679	33.9
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	27	76302	35.4
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	34	77823	43.7
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	39	78965	49.4
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	21	77673	27.0
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	28	70241	39.9
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	25	71282	35.1
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	23	70744	32.5
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	13	70324	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	11	68485	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Arizona"	"04"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	12	69574	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	10	4221	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	64	53964	118.6
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	49	54269	90.3
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	31	59547	52.1
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	52	59166	87.9
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	24	59528	40.3
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	39	59146	65.9
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	32	59859	53.5
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	24	60457	39.7
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	45	61335	73.4
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	30	59855	50.1
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	23	58123	39.6
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	25	58087	43.0
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	14	56860	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	11	56714	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Colorado"	"08"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	15	57096	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	21	18793	111.7
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	11	18848	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	14	19731	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	12	19697	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	17	20139	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	17	21151	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	11	21625	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	21	22554	93.1
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	21	23462	89.5
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	21	23300	90.1
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	14	22508	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	18	22352	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	16	21022	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	15	20505	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	14	21140	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Idaho"	"16"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	12	21282	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Montana"	"30"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	12	9290	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Montana"	"30"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	12	9974	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Montana"	"30"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	11	10466	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Montana"	"30"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	15	10294	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Montana"	"30"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	10	10095	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Nevada"	"32"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	14	24209	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Nevada"	"32"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	12	24258	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Nevada"	"32"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	11	25698	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Nevada"	"32"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	10	28610	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"New Mexico"	"35"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	11	21837	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"New Mexico"	"35"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	11	21497	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"New Mexico"	"35"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	13	21597	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"New Mexico"	"35"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	10	21794	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"New Mexico"	"35"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	14	22158	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"New Mexico"	"35"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	14	22564	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"New Mexico"	"35"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	11	23398	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"New Mexico"	"35"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	17	23008	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"New Mexico"	"35"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	10	23174	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	15	41842	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	16	42037	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	10	43834	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	15	44572	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	17	45677	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	17	45534	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	15	47497	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	10	49240	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	15	48432	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	14	49602	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	14	48929	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	28	46573	60.1
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	27	45871	58.9
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	19	45636	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	20	46061	43.4
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	12	46303	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Utah"	"49"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	18	46516	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Alaska"	"02"	"< 1 year"	"0"	"American Indian or Alaska Native"	"1002-5"	"2009"	"2009"	12	2628	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Alaska"	"02"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	12	7013	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"1999"	"1999"	23	51557	44.6
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2000"	"2000"	15	52268	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2002"	"2002"	12	59046	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2003"	"2003"	14	61533	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2004"	"2004"	12	61400	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2007"	"2007"	12	63737	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2008"	"2008"	18	66726	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2009"	"2009"	16	64160	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2010"	"2010"	11	64919	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2011"	"2011"	16	65920	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2013"	"2013"	11	66438	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2014"	"2014"	14	70017	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2017"	"2017"	10	67755	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"1999"	"1999"	62	39515	156.9
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2000"	"2000"	33	39979	82.5
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2001"	"2001"	17	39667	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2002"	"2002"	33	38441	85.8
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2003"	"2003"	33	38165	86.5
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2004"	"2004"	28	37330	75.0
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2005"	"2005"	34	37976	89.5
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2006"	"2006"	27	38213	70.7
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2007"	"2007"	38	39925	95.2
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	44	40380	109.0
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2009"	"2009"	42	40335	104.1
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2010"	"2010"	49	40916	119.8
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	36	41986	85.7
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2012"	"2012"	48	41690	115.1
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2013"	"2013"	52	40876	127.2
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2014"	"2014"	37	41218	89.8
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2015"	"2015"	32	41712	76.7
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2016"	"2016"	29	41348	70.1
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2017"	"2017"	35	39924	87.7
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	154	387143	39.8
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	120	382887	31.3
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	65	417749	15.6
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	122	411323	29.7
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	121	416281	29.1
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	133	415473	32.0
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	111	415910	26.7
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	101	413232	24.4
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	130	415685	31.3
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	135	413673	32.6
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	126	382694	32.9
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	120	375277	32.0
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	112	384537	29.1
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	111	388232	28.6
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	91	379725	24.0
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	88	378181	23.3
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	76	378052	20.1
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	75	373934	20.1
+	"Census Region 4: West"	"CENS-R4"	"California"	"06"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	69	367881	18.8
+	"Census Region 4: West"	"CENS-R4"	"Hawaii"	"15"	"< 1 year"	"0"	"Asian or Pacific Islander"	"A-PI"	"2003"	"2003"	13	11371	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	24	39755	60.4
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	42	39790	105.6
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	28	40997	68.3
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	26	40372	64.4
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	19	40458	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	18	39581	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	26	40513	64.2
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	22	41551	52.9
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	31	43289	71.6
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	14	42430	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	29	41129	70.5
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	28	40462	69.2
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	21	39971	52.5
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	20	39165	51.1
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	23	39101	58.8
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	21	39073	53.7
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	19	39877	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	19	40367	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Oregon"	"41"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	18	40184	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2008"	"2008"	10	6710	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"Black or African American"	"2054-5"	"2011"	"2011"	10	6687	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"1999"	"1999"	54	65908	81.9
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2000"	"2000"	65	65702	98.9
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2001"	"2001"	45	67203	67.0
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2002"	"2002"	57	65436	87.1
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2003"	"2003"	36	64603	55.7
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2004"	"2004"	43	65456	65.7
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2005"	"2005"	33	64661	51.0
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2006"	"2006"	40	68162	58.7
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2007"	"2007"	43	70336	61.1
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2008"	"2008"	53	70219	75.5
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2009"	"2009"	47	71896	65.4
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2010"	"2010"	35	70008	50.0
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2011"	"2011"	39	69532	56.1
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2012"	"2012"	37	69703	53.1
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2013"	"2013"	34	70064	48.5
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2014"	"2014"	40	70037	57.1
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2015"	"2015"	40	70803	56.5
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2016"	"2016"	40	71857	55.7
+	"Census Region 4: West"	"CENS-R4"	"Washington"	"53"	"< 1 year"	"0"	"White"	"2106-3"	"2017"	"2017"	38	71341	53.3
+"---"
+"Dataset: Underlying Cause of Death, 1999-2017"
+"Query Parameters:"
+"ICD-10 130 Cause List (Infants): #Sudden infant death syndrome (R95)"
+"Single-Year Ages: < 1 year"
+"Group By: Census Region; State; Single-Year Ages; Race; Year"
+"Show Totals: Disabled"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Feb 11, 2020 12:07:48 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Underlying Cause of Death"
+"1999-2017 on CDC WONDER Online Database, released December, 2018. Data are from the Multiple Cause of Death Files, 1999-2017, as"
+"compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative Program. Accessed"
+"at http://wonder.cdc.gov/ucd-icd10.html on Feb 11, 2020 12:07:48 AM"
+"---"
+Messages:
+"1. Totals are not available for these results due to suppression constraints. More Information:"
+"http://wonder.cdc.gov/wonder/help/faq.html#Privacy."
+"2. Rows with suppressed Deaths are hidden. Use Quick Options above to show suppressed rows."
+"---"
+Caveats:
+"1. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#2014-Revision."
+"2. Circumstances in Georgia for the years 2008 and 2009 have resulted in unusually high death counts for the ICD-10 cause of"
+"death code R99, ""Other ill-defined and unspecified causes of mortality."" Caution should be used in interpreting these data."
+"More information: http://wonder.cdc.gov/wonder/help/ucd.html#Georgia-Reporting-Anomalies."
+"3. Circumstances in New Jersey for the year 2009 have resulted in unusually high death counts for the ICD-10 cause of death code"
+"R99, ""Other ill-defined and unspecified causes of mortality"" and therefore unusually low death counts in other ICD-10 codes,"
+"most notably R95, ""Sudden Infant Death Syndrome"" and X40-X49, ""Unintentional poisoning."" Caution should be used in"
+"interpreting these data. More information: http://wonder.cdc.gov/wonder/help/ucd.html#New-Jersey-Reporting-Anomalies."
+"4. Circumstances in California resulted in unusually high death counts for the ICD-10 cause of death code R99, ""Other"
+"ill-defined and unspecified causes of mortality"" for deaths occurring in years 2000 and 2001. Caution should be used in"
+"interpreting these data. More information: http://wonder.cdc.gov/wonder/help/ucd.html#California-Reporting-Anomalies."
+"5. Data are Suppressed when the data meet the criteria for confidentiality constraints. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Assurance of Confidentiality."
+"6. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Unreliable."
+"7. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Not Stated."
+"8. Information included on the death certificate about the race and Hispanic ethnicity of the decedent is reported by the"
+"funeral director as provided by an informant, often the surviving next of kin, or, in the absence of an informant, on the basis"
+"of observation. Race and ethnicity information from the census is by self-report. To the extent that race and Hispanic origin"
+"are inconsistent between these two data sources, death rates will be biased. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Racial Differences."
+"9. The population figures for year 2017 are bridged-race estimates of the July 1 resident population, from the Vintage 2017"
+"postcensal series released by NCHS on June 27, 2018. The population figures for year 2016 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2016 postcensal series released by NCHS on June 26, 2017. The population figures for"
+"year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015 postcensal series released by NCHS"
+"on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for year 2013 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS on June 26, 2014. The"
+"population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the Vintage 2012 postcensal"
+"series released by NCHS on June 13, 2013. The population figures for year 2011 are bridged-race estimates of the July 1 resident"
+"population, from the Vintage 2011 postcensal series released by NCHS on July 18, 2012. Population figures for 2010 are April 1"
+"Census counts. The population figures for years 2001 - 2009 are bridged-race estimates of the July 1 resident population, from"
+"the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26, 2012. Population figures for 2000 are"
+"April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal series of July 1 estimates. Population"
+"figures for the infant age groups are the number of live births. <br/><b>Note:</b> Rates and population figures for years 2001 -"
+"2009 differ slightly from previously published reports, due to use of the population estimates which were available at the time"
+"of release."
+"10. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/ucd.html#Age Group."
