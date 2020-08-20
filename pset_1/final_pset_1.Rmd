@@ -1,0 +1,101 @@
+---
+title: "Problem Set #1"
+author: "Maria Burzillo"
+date: "2/4/2020"
+output: html_document
+---
+---
+title: "pset_1_v2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(lubridate)
+```
+
+```{r sophomores_data_preparation, echo = FALSE}
+# read in the file, skipping the first row, removing completly empty columns, and cleaning the names
+#NOTE: clean_names() above leads to an error here because when we load in the file, it automatically repairs the names to make sure they are all unique. Since we are renaming the columns anyways, this is not a major issue. 
+
+concentration_so <- read_excel("concentration.xlsx", 
+    sheet = "SO Only", skip = 1) %>%
+  remove_empty(which = c("rows", "cols")) %>%
+  clean_names() 
+
+
+# rename the columns to make pivoting possible for the years
+
+names(concentration_so) <- c("field_of_study", "division","m_2010-2011", "f_2010-2011", "subt_2010-2011",' m_2011-2012', "f_2011-2012", "subt_2011-2012", "m_2012-2013", "f_2012-2013", "subt_2012-2013", "m_2013-2014", "f_2013-2014", "subt_2013-2014", "m_2014-2015", "f_2014-2015", "subt_2014-2015", "m_2015-2016"," f_2015-2016", "subt_2015-2016", "m_2016-2017", "f_2016-2017", "subt_2016-2017"," m_2017-2018", "f_2017-2018", "subt_2017-2018", "m_2018-2019", "f_2018-2019", "subt_2018-2019", "m_2019-2020", "f_2019-2020", "subt_2019-2020")
+
+# use pivot_longer() to create separate variables for gender group and year to tidy the data. Filter out the field of study with nas because these came from the totals listed at the bottom of the dataset
+
+concentration_so <- concentration_so %>%
+  pivot_longer(c( "m_2010-2011", "f_2010-2011", "subt_2010-2011",' m_2011-2012', "f_2011-2012", "subt_2011-2012", "m_2012-2013", "f_2012-2013", "subt_2012-2013", "m_2013-2014", "f_2013-2014", "subt_2013-2014", "m_2014-2015", "f_2014-2015", "subt_2014-2015", "m_2015-2016"," f_2015-2016", "subt_2015-2016", "m_2016-2017", "f_2016-2017", "subt_2016-2017"," m_2017-2018", "f_2017-2018", "subt_2017-2018", "m_2018-2019", "f_2018-2019", "subt_2018-2019", "m_2019-2020", "f_2019-2020", "subt_2019-2020"), names_to = "gender_year", values_to = "count") %>%
+  separate(gender_year, into = c("gender_year", "drop_it"), sep = -5)  %>%
+  separate(gender_year, into = c("gender", "year"), sep = -4) %>%
+  separate(gender, into = c("gender", "to_drop"), sep = -1) %>%
+  select(-to_drop, -drop_it) %>%
+  mutate(gender = trimws(gender)) %>%
+  mutate(year = make_datetime(as.integer(year))) %>%
+  filter(!(is.na(field_of_study)))
+
+# pivot wider to create a variable for male count and female count so that operations can be performed comparing male and female counts
+
+concentration_so_gender <- concentration_so %>%
+  pivot_wider(names_from = gender, values_from = count) %>%
+  mutate(prop_female = f/subt) %>%
+  mutate(m_minus_f = m - f)
+
+# find the top ten concentraitons that have historically had the largest gaps between males and females numerically, and name this subset for later merging
+
+top_concentration_so_gap <- concentration_so_gender %>%
+  group_by(field_of_study) %>%
+  summarise(tot_female = sum(f, na.rm = T),
+            tot_male = sum(m, na.rm = T),
+            tot_gap = abs(tot_male - tot_female),
+            rel_gap = tot_male - tot_female) %>%
+  arrange(-tot_gap) %>%
+  head(10)
+
+# inner join the original cleaned data and the subset to get the subset of the larger dataset with the top 10 fields of study only
+
+gender_gaps <- inner_join(top_concentration_so_gap, concentration_so_gender)
+
+```
+
+```{r sophomore_visal, echo = FALSE}
+# with the final dataset, group by relevant variables and summarize to find the proportion of females within each field of study by year
+# create the ggplot, adding geoms for a scatter plot, paths, and a line to represent gender parity
+#facet on the division variable
+# format the visual and titles/labels
+
+gender_gaps %>%
+  group_by(field_of_study, year, division) %>%
+  summarise(tot_female = sum(f, na.rm = T),
+            tot_male = sum(m, na.rm = T),
+            tot_gap = (tot_male - tot_female),
+            prop_female = tot_female/(tot_female + tot_male)) %>%
+  ggplot(aes(x = year, y = prop_female)) +
+  geom_point(aes(color = field_of_study, size = gender_gaps$subt)) +
+  geom_path(aes(color = field_of_study), alpha = .5) +
+  geom_hline(aes(yintercept = .50), color = "red") +
+  facet_wrap(~division) +
+  theme_bw() +
+  ggtitle("Proportion of Female Sophomores in the Top 10 Concentrations\n with the Largest Historic Gender Gap, 2010-2019") +
+  ylab("Proportion of Sophmore Female Concentrators") +
+  xlab("Year") +
+  labs(caption = "My caption") +
+  labs(size = "Concentration Size", color = "Concentration") +
+  theme(legend.position="right", 
+        plot.title = element_text(margin=margin(10,10,10,10), face = "bold", hjust = 0.5),
+        axis.title.x = element_text(margin=margin(10,10,10,10)),
+        legend.title = element_text(size = 8, margin=margin(0,0,0,0)),
+        legend.text  = element_text(size = 8),
+        strip.background =element_rect(fill="lightblue")) 
+
+```
+
