@@ -1,0 +1,713 @@
+---
+title: "GOV 1O06 Midterm"
+author: "Maria Burzillo"
+date: "3/28/2020"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+
+# don't include r set-up in html output
+
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(tidyverse)
+library(skimr)
+library(rstanarm)
+library(stargazer)
+library(bayesplot)
+```
+
+# Question 1
+
+```{r data_import_and_cleaning, include = FALSE, warning = FALSE}
+
+# don't include data import in html output
+
+# set warning = FALSE because warning is about a column that is irrelevant and
+# excluded from the data being unnammed.
+
+pnas_data <- read_csv("train_data /pnas_data.csv",
+                      col_types = cols(X1 = col_skip())) 
+
+# create a new dataset called pnas_data_1 to hold new variables before making
+# final tibble. Mutate pnas_data dataset to add start_att, end_att, and chg_att
+# as specified in the instructions. Filter out all rows with NAs for change in
+# attitude. Create line and station variables by separating the treated_unit
+# variable into line and station.
+
+pnas_data_1 <- pnas_data %>%
+  mutate(start_att = numberim.x + Remain.x + Englishlan.x,
+         end_att = numberim.y + Remain.y + Englishlan.y,
+         chg_att = end_att - start_att) %>%
+  filter(!(is.na(chg_att))) %>%
+  separate(treated_unit, c("line","station"), sep = "_")
+
+
+# Creat the waits on platform variable. Change waits on platform variable to
+# false for all NA values and true for all non-NA values
+  
+pnas_data_1$waits_on_platform <- NA
+pnas_data_1$waits_on_platform[!(is.na(pnas_data_1$wait_on_pl))] <- "TRUE"
+pnas_data_1$waits_on_platform[is.na(pnas_data_1$wait_on_pl)] <- "FALSE"
+
+
+# change race variable so that white ("1" in variable "white") is coded as
+# "white" and "non-white" is coded for white == 0
+
+pnas_data_1$race_char <- NA
+pnas_data_1$race_char[pnas_data_1$white == 1] <- "white"
+pnas_data_1$race_char[pnas_data_1$white == 0] <- "non-white"
+
+
+# change gender variable so that it is coded as male when male == 1 and female
+# when male == 0 in the original data
+
+pnas_data_1$gender_char <- NA
+pnas_data_1$gender_char[pnas_data_1$male == 1] <- "male"
+pnas_data_1$gender_char[pnas_data_1$male == 0] <- "female"
+
+
+# change party so that when republican == 1 in the original data, party is
+# assigned the value "Republican" and "non-Republican" if republican == 0
+
+pnas_data_1$party_char <- NA
+pnas_data_1$party_char[pnas_data_1$republican == 1] <- "Republican"
+pnas_data_1$party_char[pnas_data_1$republican == 0] <- "non-Republican"
+
+
+# change the time_length to "3-day" when time.treatment = "a" in the original data and to "10-day" when time.treatment = "b" in the original data. 
+
+pnas_data_1$t_time <- NA
+pnas_data_1$t_time[pnas_data_1$time.treatment == "a"] <- "3-day"
+pnas_data_1$t_time[pnas_data_1$time.treatment == "b"] <- "10-day"
+
+
+# create final tibble with relevant variables
+
+data <- tibble(
+  treatment = pnas_data_1$treatment,
+  chg_att = pnas_data_1$chg_att,
+  start_att = pnas_data_1$start_att,
+  end_att = pnas_data_1$end_att,
+  waits_on_platform = as.logical(pnas_data_1$waits_on_platform),
+  time_length = as.factor(pnas_data_1$t_time),
+  gender = pnas_data_1$gender_char,
+  party = pnas_data_1$party_char,
+  race = pnas_data_1$race_char,
+  log_income = log(pnas_data_1$income.new),
+  line = pnas_data_1$line,
+  station = pnas_data_1$station
+)
+
+```
+
+```{r checks_on_cleaning,include = FALSE}
+
+# don't include checks for data display and glimpse, just for personal use
+
+set.seed(10)
+data %>% sample_n(10) %>% 
+  select(line, station, party, race, log_income, everything())
+
+glimpse(data)
+
+```
+```{r skim_display, echo = FALSE}
+
+# echo = false so we only see the output and not the code
+
+# display results of skim to verify data cleaning and set-up correct
+
+skim(data)
+
+```
+
+# Question 2
+
+```{r q2_model, include = FALSE, cache = TRUE}
+
+# don't include the model because will pull out and explain all relevant
+# components
+
+# cache the results to prevent needless computing for the purposes of this exam
+
+# build the model using stan_glm() to explain start_att by party and log_income
+# using the data
+ 
+m_q2 <- stan_glm(start_att ~ party + log_income, data = data)
+
+```
+
+We can first look at whether initial attitudes towards immigrants can be explained at all by party or log income. To do this, we generated a linear model that uses log income and party to explain subjects' initial exclusionary attitudes towards immigrants. The dependent variable, start_att, is the raw sum of the individuals' scores on three pre-treatment variables measuring attitudes towards immigration. Each of these scores ranged from a possible 1-5 points, meaning that the variable start_att ranges from a posisble 3-15 points. A lower score corresponds more closely to pro-immigrant attitudes. 
+
+
+
+```{r q2_model_display, echo = FALSE }
+
+# display the results of the model with two digits of accuracy for greater
+# precision.
+
+print(m_q2, detail = FALSE, digits = 2)
+
+```
+
+
+The estimated intercept is `r round(coef(m_q2)[1],2)`. This suggests that a non-republican with a log income of zero is expected to have a raw score of the three pre-treatment variables measuring attitudes towards immigration of `r round(coef(m_q2)[1],2)`. Of course, this is not super relevant, as a log income of zero, while possible, is not realistic and in fact the minimum log income in the dataset is  `r round(min(data$log_income),2)`. The MAD_SD term, which stands for the median absolute deviation, represents a more stable measure of the variance than the variance itself. Here, the MAD_SD term suggests the estimate of the intercept has an uncertainty of `r round(se(m_q2)[1],2)`. This is very large compared to the magnitude of the intercept term, which suggests a wide degree of uncertainty in the intercept term. In fact, the 95% confidence interval for the intercept term contains zero, which suggests that the estimate is highly uncertain. 
+
+The partyRepublican term represents the coefficient on the party indicator variable. The coefficient suggests that comparing a Republican and a Non-Republican with the same log income, we expect the Republican to have a higher score by `r round(coef(m_q2)[2],2)` with uncertainty `r round(se(m_q2)[2],2)`. Similarly, the coefficient on log_income suggests that when two individuals from the same party differ in log income by one log point, the individuals with one log point higher in income is expected to have a higher score by `r round(coef(m_q2)[3],2)` points with uncertainty `r round(se(m_q2)[3],2)`. The uncertainty of log_income coefficient is higher in magnitude than the coefficient itself, which suggests that its 95% confidence interval contains zero and that this measure is also highly uncertain. Finally, the sigma term represents the residual standard deviation and is estimated at `r round(sigma(m_q2),2)` with uncertainty .20. This indicates that the score of an individual is expected to be within ${\displaystyle \pm }$ `r round(sigma(m_q2),2)` points of the linear predictor for 68% of the data points and within ${\displaystyle \pm }$ `r round(2 * sigma(m_q2),2)` points for 95% of the data points. 
+
+In sum, the results suggest that income and being a Republican are associated with initially higher start_att scores, which indicate less favorable views towards immigrants. However, there is a very high degree of uncertainty in this model, so further analysis ought to be carried out. 
+
+
+
+# Question 3
+
+We next seek to explain start_att using the variable for treatment. Ideally, there would be no relationship between the starting attitude of an individual towards immigration and whether or not they received treatment if the selection of individuals for treatment was truly random. Thus, this can serve as a check on our research design. We first built a model using stan_glm() that regresses start_att on treatment. The results are as follows:
+
+
+```{r q3_model, include = FALSE, cache = TRUE}
+
+# don't include the model because will pull out and explain all relevant
+# components
+
+# cache the results to prevent needless computing for the purposes of this exam
+
+# build the model using stan_glm() to explain start_att by treatment using the data
+ 
+m_q3 <- stan_glm(start_att ~ treatment, data = data)
+
+```
+
+
+```{r q3_model_display, echo = FALSE }
+
+# display the results of the model with two digits of accuracy for greater
+# precision.
+
+print(m_q3, detail = FALSE, digits = 2)
+
+mean_non_treat <- data %>%
+  filter(treatment == 0) %>%
+  summarize(mean = mean(start_att))
+
+mean_treat <- data %>%
+  filter(treatment == 1) %>%
+  summarize(mean = mean(start_att))
+
+```
+
+The intercept is `r round(coef(m_q3)[1],2)` with an uncertainty of `r round(se(m_q3)[1],2)` as suggested by the mad sd. This suggests that for the group of individuals that did not receive treatment, the expected raw sum of the three pre-treatment variables is `r round(coef(m_q3)[1],2)`. The uncertainty is relatively low compared to the coefficient, which suggests a degree of accuracy. This result makes sense given that the mean of the start_att variable for the control (non-treatment) group was `r round(mean_non_treat,2)`. The coefficient on the treatment variable is `r round(coef(m_q3)[2],2)` with an uncertainty of `r round(se(m_q3)[2],2)`. This suggests that those who do receive treatment are expected to have a start_att score that is `r round(coef(m_q3)[2],2)` higher than those individuals who do not receive treatment. This makes sense because the mean score of the individuals in the sample who did receive treatment was `r round(mean_treat, 2)`, which is approximately the sum of the intercept and the coefficient on treatment, as expected. However, the coefficient term on the treatment variable must be taken with a grain of salt, however, because it has a large degree of uncertainty and an 95% confidence interval containing 0. The sigma value is `r round(sigma(m_q3),2)`, which suggests that the data will fall within the range of ${\displaystyle \pm }$ `r round(sigma(m_q3),2)` of the linear predictor 68% of the time and within the range of ${\displaystyle \pm }$ 2 * `r round(sigma(m_q3),2)` or `r round(2 * sigma(m_q3),2)` 95% of the time. 
+
+The results of this model may be cause for concern for Enos, as they suggest that there is a relationship between initial pre-treatment attitudes of the individuals and which treatment group they received. The mean starting attitude score was higher for the group that was treated than the group that did not receive the treatment. This could suggest that there is bias in the results. Despite the fact that Enos looks at the change in attitude rather than the absolute values of the attitude scores, this difference between the treatment and the control group could muddle the results if not adequately controlled or accounted for. 
+
+
+
+# Question 4
+
+To begin to understand the change in attitude variable, chg_att, we can fit a model using stan_glm() to explain chg_att using log_income. The results are as follows:
+
+```{r q4_model, include = FALSE, cache = TRUE}
+
+# don't include the model because will pull out and explain all relevant
+# components
+
+# build the model using stan_glm() to explain chg_att using log_income from the data
+ 
+m_q4 <- stan_glm(chg_att ~ log_income, data = data)
+
+```
+
+
+```{r q4_model_display, echo = FALSE }
+
+# display the results of the model with two digits of accuracy for greater
+# precision.
+
+print(m_q4, detail = FALSE, digits = 2)
+
+```
+
+
+The intercept of the model is `r round(coef(m_q4)[1], 2)` with uncertainty of `r round(se(m_q4)[1], 2)` as suggested by the mad sd. This suggests that for individuals with zero log income, the expected change in attitude is `r round(coef(m_q4)[1], 2)` points. As discussed in question 2, this interpretation is not very meaningful or helpful, as, while a log income of zero is possible, it is not realisitc or represented in the data, for which there is a minimum log income of `r round(min(data$log_income),2)`. The coefficient on the log_income variable is more readily interpretable here, and it suggests that comparing two individuals, an individual with a log_income one point higher would be expected to have a lower chg_att score by `r round(((-1) * coef(m_q4)[2]), 2)` points with uncertainty `r round(se(m_q4)[2], 2)`. This suggests that there is a negative relationship between log income and change in attitude, and thus that those with higher incomes are less likely on average to have a change in attitude towards immigrants over the treatment period, regardless of receiving the treatment or not. The sigma value of this model is `r round(sigma(m_q4),2)`, which suggests that the data is expected to be within the range of ${\displaystyle \pm }$ `r round(sigma(m_q4),2)` of the linear predictor 68% of the time and within the range of ${\displaystyle \pm }$ 2 * `r round(sigma(m_q4),2)` or `r round(2 * sigma(m_q4),2)` 95% of the time. This is the lowest value for sigma observed so far, suggesting that this model is relatively percise in comparison to the previous models. It is also important to note that none of the 95% confidence intervals for parameters contain zero, unlike in previous models, which also suggests that it has a relatively better fit than the previous ones. 
+
+While it is tempting to conclude from the results of this model that income has a causal effect on immigration attitudes, this statement is misleading. According to the Rubin Causal Model, the causal effect is the difference between the treatment and non-treatment outcomes of each individual. Since we cannot simultaneously observe both the treatment and non-treatment scenarios of each individual (i.e. a la the fundamental problem of causal inference), we can try to estimate the Average Treatment Effect (ATE) by finding the difference of the mean outcomes (here, the mean change in attitudes) of the treatment and control group. In our case, the slope of the log_income variable serves as an approximation of the difference in a change of attitude corresponding to a "treatment" of an individual having one log income point more. We know from the model that comparing two individuals differing in income by one log point, an individual with a log_income one point higher would be expected to have a lower chg_att score by `r round(((-1) * coef(m_q4)[2]), 2)` points with uncertainty `r round(se(m_q4)[2], 2)`. 
+
+However, there are a variety of factors that make interpreting this relationship as causal difficult and misleading. For starters, we can never truly know the causal effect on an individual of log income on a change in immigrant attitudes because of the fundamental problem of causal inference since we cannot simultaneously observe both the treatment and non-treatment scenarios of each individual. Secondly, we didn't assign a treatment and control group to investigate the causal effect of log income on a change in attitude. This was not the primary effect studied in this experimental design. Thus, we likely have problems with the assignment mechanism as well as selection bias and confounding since people were not assigned an income level randomly. Furthermore, income is not something that is easy or maybe even possible to manipulate, which means that it may not makes a lot of sense to study this potential *causal* effect of income on immigration attitudes in the first place due to phrase that there can be "no causation without manipulation." It makes more sense to interpret the relationship between income and change in attitudes towards immigrants as a simple correlation rather than a causal relationship in this case. With a more careful study design tailored to look at the causal effect of income on change in attitudes towards immigrants, we could potentially get a better estimate of the ATE. 
+
+
+
+# Question 5
+
+Next, we can seek to explain the change in attitude towards immigrants by treatment status, length of the time of treatment, and their interaction. We fit a model using stan_glm() to obtain the following results:
+
+```{r q5_model, include = FALSE}
+
+# don't include the model because will pull out and explain all relevant
+# components
+
+# build the model using stan_glm() to explain chg_att using treatment, time_length, and their interaction using the data
+ 
+m_q5 <- stan_glm(chg_att ~ treatment * time_length, data = data)
+
+```
+
+
+```{r q5_model_display, echo = FALSE }
+
+# display the results of the model with two digits of accuracy for greater
+# precision.
+
+print(m_q5, detail = FALSE, digits = 3)
+
+```
+
+The intercept of the model is `r round(coef(m_q5)[1], 2)` with uncertainty `r round(se(m_q5)[1], 2)`. This suggests that for individuals who did not receive treatment and were measured over the 10-day treatment period, the expected change in attitude score was `r round(coef(m_q5)[1], 2)`, indicating a change in attitude towards a slightly higher level of support towards immigrants, though there is a relatively large degree of uncertainty. The coefficient on the treatment variable is `r round(coef(m_q5)[2], 2)` with uncertainty `r round(se(m_q5)[2], 2)`. This suggests that for two individuals receiving the same length of time between measurements, the difference between an individual receiving treatment and not receiving treatment is expected to be a difference in score of `r round(coef(m_q5)[2], 2)`. Thus, this suggests that individuals who received treatment had a larger increase in score than those who did not and thus a relative shift towards anti-immigrant attitudes, although the results are again uncertain. Similarly, the coefficient on the time_length variable suggests that for individuals in the same treatment (or control) group, individuals receiving the three day time length assignment are expected to have a difference in change in attitude score of `r round(coef(m_q5)[3], 2)` with uncertainty `r round(se(m_q5)[3], 2)`. This suggests that, all else equal, the shorter time frame was associated with a lower change in attitude score, although the results are very uncertain given the high mad_sd value. Finally, the interaction effect has the coefficient of `r round(coef(m_q5)[4], 2)` with uncertainty `r round(se(m_q5)[4], 2)`. This suggests that for those individuals receiving the treatment and the three day length time frame were expected to have a change in attitude score `r round(coef(m_q5)[4], 2)` points higher than those not receiving treatment and not in the three length time frame group, although (again), the results have a high degree of uncertainty. The value of sigma for the model is `r round(sigma(m_q5), 2)`, which suggests that the data is expected to be within the range of ${\displaystyle \pm }$ `r round(sigma(m_q5),2)` of the linear predictor 68% of the time and within the range of ${\displaystyle \pm }$ 2 * `r round(sigma(m_q5),2)` or `r round(2 * sigma(m_q5),2)` 95% of the time.
+
+This model is approximately consistent with the claims made in Enos (2014). Enos (2014) suggests that treatment shifts the attitudes of the treated towards exclusionary views in contrast to the control group. Enos (2014) breaks down the change in attitude by the three policy sub-questions and finds a positive and statistically significant increase in score for two of the policy questions and a positive yet insignificant increase in score for the third. This is approximately consistent with our model. Although we look at the change in the aggregate score of the three policy questions, the coefficient on treatment in our model is positive. However, the mad sd of the treatment coefficient is large compared to the value, meaning the the confidence interval does include zero, which sheds uncertainty onto the result. It would be meaningful to break down the score in the way that Enos (2014) does to really check if the results were consistent. 
+
+Furthermore, Enos (2014) also suggests that while both the 10 and 3 day treatments move opinions in an exclusionary direction, the 3 day treatment effect is much larger than the 10 day effect. Our model also supports this claim, as it estimates that average change in attitude for a treated individual under the 10 day treatment plan is `r round(coef(m_q5)[1] + coef(m_q5)[2], 2) ` (the sum of the intercept and treatment coefficients in the model) while the average change in attitude for a treated individual under the 3 day treatment plan is `r round(coef(m_q5)[1] + coef(m_q5)[2] + coef(m_q5)[3] + coef(m_q5)[4], 2)` (the sum of the intercept, treatment, time length, and the interaction of the treatment and time length coefficients). Both the coefficients of the model here and in Enos (2014) have a large degree of uncertainty. Enos (2014) attributes the uncertainty to the small sample size due to the further division of the original treatment and control groups by treatment length status (10 day v. 3 day) and justifies the result with qualitative evidence collected by the confederates in the experiment. This could also make sense in the context of our model. In general, we could be more confident about the results if the experiment had been undertaken with a larger sample size. In terms of the overall results and the results broken down by the length of treatment, the effect sizes were smaller in magnitude in Enos (2014) than in our model. This could be due to differences in the model specifications or data cleaning. While further investigation is needed into these discrepancies, the overall results tell approximately the same story. 
+
+
+# Question 6
+
+We next build a model that explains change in attitude as a funciton of treatment, waiting on the platform, log income, and race. The results are as follows: 
+
+```{r q6_model, include = FALSE, cache = TRUE}
+
+# don't include the model because will pull out and explain all relevant
+# components
+
+# build the model using stan_glm() to explain chg_att using treatment,
+# waits_on_platform, log_income, and race using the data
+ 
+m_q6 <- stan_glm(chg_att ~ treatment + waits_on_platform + log_income + race, data = data)
+
+```
+
+
+```{r q6_model_display, echo = FALSE }
+
+# display the results of the model with two digits of accuracy for greater
+# precision.
+
+print(m_q6, detail = FALSE, digits = 3)
+
+```
+
+
+One of the most important assumptions of the model is validity. The main idea of validity is that the data we are analyzing maps directly to the research question we are trying to answer. In this case, Enos (2014)'s primary research question is whether or not inter-group contact increases exlcusionary attitudes. This model seems to do a relatively good job in terms of validity, as it primarily examines the effect of the treatment variable, whether or not an individual experiences increased inter-group contact, on a measure of exlusionary attitudes. One concern would be that the measure of exclusionary attitudes used in this study (the sum of the scores on the three pre-treatment questions) does not accurately reflect exclusionary attitudes of individuals. Enos (2014) does not provide a substantial justification as to the validity of these questions in terms of identifying exclusionary attitudes; however, logically, the questions seem quite valid. Additionally, another concern could be that different types of inter-group contact produce different changes in exclusionary attitudes. For example, increased interaction with "out-groups" on a commute may lead to very different treatment effects than "out-groups" moving into your neighborhood. Thus, the results of the study ought to be extrapolated with care both in terms of what kind of "exclusionary attitudes" the results can be applied to and what kind of "treatments" we expect to produce similar results. 
+
+Another part of validity is also that we include all of the relevant predictors in our model. In this specific model, we include race, whether or not an individual waits on the platform, and log income in addition to the treatment effect as predictors. It is generally difficult to know what inputs to put into a regression model. Enos (2014) appears to stick with simpler regressions, explaining scores on the policy questions by treatment effect and by the treatment effect conditional on other characteristics such as whether or not the individual waits on the platform. It makes sense that the additional predictors we included (race and log income) would also help to explain differences in change in attitude; however, the mad_sds on these variables are quite large. Thus, it could be meaningful to check the model fit using posterior predictive checking or by comparing the chosen model to a simpler one or others using leave-one-out cross validation in order to assess whether or not it is meaningful to include these predictors. 
+
+A second important assumption of regression models is representativeness, or the assumption that the sample in the analysis is representative of the population as a whole. One clear issue with the model and Enos (2014) due to the law of large numbers is that the sample size is relatively small (109 observations in Enos (2014) and 115 in our model). With a much larger sample size, we could be more confident that the estimated average treatment effect and other measures were representative of the true average treatment effect. The sample was also gathered in the Boston, MA metropolitan area and selected individuals who regularly commute on trains. Enos (2014) also notes that there was an imbalance in terms of race between the treatment and the control group, which could have effected the representativeness of the sample. Furthermore, while invitations to participate were distributed randomly, the subjects had to opt in and were incentivized to do so with a $5 gift card. All of these factors could have introduced selection bias, diminishing the representativeness of the sample. 
+
+
+An additional assumption, additivity and linearity, is the primary mathematical assumption of the linear regression used in the model and assumes that the model's deterministic component is the linear sum of the separate predictors and their coefficients. In general, for non-additive data, it might make more sense to use a non-linear model. However, we have not made any attempt to check if the data here is additive, and since a basic linear regression can be informative even for non-linear data, we will stick to this assumption here. There are a few additional assumptions including independence of errors, equal variance of errors, and normality of errors. However, these tend to be less important assumptions. Independence of the errors could be checked relatively easily in this model by making a scatter plot of the residuals v. the predicted values. Equal variance of errors and normality of errors are less important in their potential effect on the model, so we will not discuss them in detail. 
+
+
+# Question 7
+
+Next, we would like to build a high-quality model using stan_glm() for future prediciton of end attitude. There are many possible formulations of a regression model for this problem given that we have a variety of possible predictors. To start, we can simply regress end_att on all of the potential predictors to yield the following results:
+
+
+```{r m1_q7, include = FALSE, cache = TRUE}
+
+# don't include the model because will pull out and explain all relevant
+# components
+
+# build the model using stan_glm() that uses all of the predictors to explain
+# end_att. chg att is not included because if we knew both the start and the
+# change in attitude, we could perfectly predict the end attitude already.
+
+m1_q7 <- stan_glm(end_att ~ treatment + start_att + waits_on_platform + time_length + gender + party + race + log_income + line + station, data = data)
+
+```
+
+
+```{r m1_q7_display, echo = FALSE}
+
+# display the results of the model with two digits of accuracy for greater
+# precision.
+
+print(m1_q7, detail = FALSE, digits = 3)
+
+```
+
+On first glance, this model is likely sub-optimal. The mad_sd values on many of the coefficients are greater in magnitude than the coefficients themselves, revealing a high degree of uncertainty. Similarly, the sigma value of `r round(sigma(m1_q7),2)` is very large compared to the median value of the dependent variable, end_att, of `r round(mean(data$end_att), 2)`, and it has a very large uncertainty according to its mad_sd. Finally, the coefficients are hard to interpret for the most part. For example, the intercept of `r round(coef(m1_q7)[1],2)` has no real interpretation and is off the scale of possible values for the end attitude, which is (`r round(min(data$end_att),2)`, `r round(max(data$end_att),2)`). 
+
+To better understand the predictive performance of the model, we can evaluate it using the leave-one-out (loo) cross-validation method. This method refits the model n times, each without one of the data points and then predicts the value for the left-out data point. The results of the loo cross-validation are as follows: 
+
+```{r loo_1, include = FALSE, cache = TRUE}
+
+# don't include specification because will display results separately
+
+# calculate the loo cross-validation output
+
+loo_1 <- loo(m1_q7)
+
+```
+
+```{r loo_1_print, echo = FALSE}
+
+# print out the results of the loo cross-validation
+
+print(loo_1)
+
+```
+
+The results of the loo cross-validation indicate that the computation is stable (i.e. the Pareto k estimates are good and no warning was returned). In the log-likelihood matrix, elp_loo represents the estimated log score and its corresponding uncertainty. Generally, a higher value of elpd_loo represents a better predictive performance. Here, the score is very low, which may indicate that the model has a poor predictive fit. The uncertainty here as reflected by the standard error may be relatively high because of the relatively small sample size of the data. p_loo gives the "effective number of parameters" in the model. This number is extremely high compared to the number of parameters in the model, which likely indicates errors with the model specification or is a reflection of weaker data. Finally, looic is the loo information criteria, which we can use to compare to deviance and other measures. Underneath the log-likelihood matrix is the Monte Carlo standard error of elp_loo, which provides a measure of uncertainty based on posterior simulations rather than the finite number of data points in the regression (as in the other SE measures in the log-likelihood matrix). In this case, it is not able to be estimated and is reported as NA, another sign that the model is unreliable. As we explore alternative models, we can keep these reulsts in the back of our mind for comparison with other loo cross-validations for alternative models.
+
+
+A first variation that we could try would be  log-transformation. Since we do not want to transform the dependent variable in this case to keep model comparison simple and since it makes no sense to log transform indicator or categorical variables, the only real option for transformation is starting attitude, as log_income has already been transformed. Thus, we can re-specify the model with log(start_att) instead of start_att. This yields the following results: 
+
+
+```{r log_transform, include = FALSE, cache = TRUE}
+
+# don't include the model because will pull out and explain all relevant
+# components
+
+# build the model using stan_glm() to explain end_att with the same inputs as
+# the last model but now taking the log of start_att
+
+m2_q7 <- stan_glm(end_att ~ treatment + log(start_att) + waits_on_platform + time_length + gender + party + race + log_income + line + station, data = data)
+
+```
+
+```{r m2_q7_display, echo = FALSE}
+
+# display the results of the model with two digits of accuracy for greater
+# precision.
+
+print(m2_q7, detail = FALSE, digits = 3)
+
+```
+
+The immediate model results suggest a slight improvement given the lower value of sigma, but it is hard to know without further tests. Thus, we perform the same loo cross-validation on this new model, which yields:
+
+```{r loo_2, cache = TRUE, echo = FALSE}
+
+# don't include the because will display results separately
+
+# calculate the loo cross-validation output
+
+loo_2 <- loo(m2_q7)
+
+# display the loo cross-validation output
+
+loo_2
+
+```
+
+The elpd_loo estimated log score has increased substantially, which is generally indicative of more predictive power. The standard errors on all three terms have also decreased compared to the original model, and the Monte Carlo SE of elpd_loo can now be computed, although it is high. To more robustly compare the two models, we can compare them directly for each data point using loo_compare. 
+
+```{r model_1_and_2_compare, echo = FALSE}
+
+# compare the models point by point using loo_compare()
+
+loo_compare(loo_1, loo_2)
+
+```
+
+The output of loo_compare indicates that model 2 is a much better predictive model, with model 1 having a lower predictive density. Below, we can see a plot comparing 100 posterior predictive checks to the distribution of the data for each model. We can very easily see from the visual that both fits are extremely poor. 
+
+```{r model_fit_checks_1, echo = FALSE, warning = FALSE}
+
+# use posterior_predict() to draw from the posterior predictive distribution
+
+# suppress warning about exluded points, only because of xlim change on plot
+
+yrep_1 <- posterior_predict(m1_q7)
+
+# initialize number of simulations to match the length of the posterior predict matrix
+
+n_sims <- nrow(yrep_1)
+
+# create a random subset of 100 of the simulation numbers to eventually include in the plot
+
+subset <- sample(n_sims, 100)
+
+# plot the distribution of the data and the randomly selected 100 distributions
+# from the posterior_predict() and title the plot appropriately
+
+ppc_dens_overlay(data$end_att, yrep_1[subset, ], xlim = c(-80,80)) +
+  ggtitle("Plot of 100 Predictive Replications of Replicated Data from Model 1 v. the\nDistribution of the Data") +
+   xlim(-40,40)
+```
+
+
+```{r model_fit_checks_2, echo = FALSE, warning = FALSE}
+
+# suppress warning about exluded points, only because of xlim change on plot
+
+# again, generate the posterior predictions and plot 100 randomly sampled
+# distributions with the actual data
+
+yrep_2 <- posterior_predict(m2_q7)
+n_sims <- nrow(yrep_2)
+subset <- sample(n_sims, 100)
+ppc_dens_overlay(data$end_att, yrep_2[subset, ]) +
+  ggtitle("Plot of 100 Predictive Replications of Replicated Data from Model 2 v. the\nDistribution of the Data") +
+   xlim(-40,40)
+```
+
+Thus, it makes sense to go back to the basics and rebuild the model from scratch starting from the simplest specification. Out of all of the possible predictors, start_att seems the most obvious, as even with a relatively large change in attitude, we expect the end attitude to be highly correlated with the start attitude. Thus, we can start with this as our sole initial predictor. The results are as follows: 
+
+
+```{r m3_model, include = FALSE, echo = FALSE}
+
+# create a model using start attitude to explain end_att
+
+m3_q7 <- stan_glm(end_att ~ start_att, data = data)
+
+```
+
+```{r m3_model_display, echo = FALSE}
+
+# print the results of the model
+
+print(m3_q7, digits = 3, comments = F)
+
+```
+
+The model improvement here is remarkable. While the intercept remains uninterpretable, as it corresponds to someone with a start attitude of 0, which is impossible as the minimum value is `r min(data$start_att)`, the magnitude is within a much more realistic range. Furthermore, the mad sd value is reasonable as well. As for the coefficient on start_att, it makes sense, as we would expect that for two individuals differing by one point on starting attitude, the one with the higher starting attitude would have a higher ending attitude in most cases. The mad sd value on the start_att coefficient is also small, indicating a small degree of uncertainty. Furthermore, the sigma value of the model is significantly lower and also has a relatively small degree of uncertainty as represented by the mad sd value. 
+
+We can now more formally assess the predictive performance of the model using loo cross-validation and comparing the models to our previously best model: model 2. The loo results are:
+
+```{r loo_3, loo_model_3_calc, echo = FALSE}
+
+# perform loo cross-validation on model 3
+
+loo_3 <- loo(m3_q7)
+loo_3
+
+```
+
+The elpd_loo has increased substantially and the p_loo value representing the estimated number of parameters is within a realistic range now. Furthermore, the Monte Carlo SE of elpd_loo is close to zero, as desired. The standard errors of all of the loo output terms are also reasonable. The model comparison using loo_compare() outputs:
+
+```{r loo_compare_m2_m3, echo = FALSE}
+
+# use loo_compare to compare models 2 and 3
+
+loo_compare(loo_3, loo_2)
+```
+
+These results indicate that the new model has a much higher expected predictive power than the previous model, model 2. Thus, we can proceed using this model. As one final check and to visualize the progress made in our fitting process, we can look at the graphic showing the predictive replications and the data. The improvement in the fit when the below visual is compared to the visuals produced for the first two models is quite dramatic.
+
+
+```{r plot_model_3, echo = FALSE}
+
+# again, generate the posterior predictions and plot 100 randomly sampled
+# distributions with the actual data
+
+yrep_3 <- posterior_predict(m3_q7)
+n_sims <- nrow(yrep_3)
+subset <- sample(n_sims, 100)
+ppc_dens_overlay(data$end_att, yrep_3[subset, ]) +
+  ggtitle("Plot of 100 Predictive Replications of Replicated Data from Model 3 v. the\nDistribution of the Data") +
+   xlim(-40,40)
+
+```
+
+It is likely, though, that this model could be improved by the addition of some additional predictors. Since the primary hypothesis of Enos (2014) was that exposure to immigrants increased anti-immigrant sentiment, it makes sense to add in additional predictors that may indicate additional exposure to immigrants, namely the treatment variable and the waits_on_platform variable. Thus we next fit a model where end_att is explained by start_att, treatment, and waits_on_platform:
+
+
+```{r model_4_creation, include = FALSE}
+
+# create a linear model that uses start_att, treatment, and waits_on_platform to
+# explain end attitude
+
+m4_q7 <- stan_glm(end_att ~ start_att + treatment + waits_on_platform, data = data)
+```
+```{r model_4_display, echo = FALSE}
+
+# print model results
+
+print(m4_q7, digits = 2, comments = F)
+```
+
+The initial model results indicate that adding in these variables creates a slightly better fit. The sigma value has decreased and remains highly certain. Furthermore, the effect sizes on start_att and treatment are large an precise. There are some concerns about the waits on platform variable, as it is somewhat imprecise, which we discuss in more detail later. The results of the loo cross-validation and model comparison to the previous best model, model 3, are as follows:
+
+```{r model_4_loo, echo = FALSE}
+
+# perform loo cross-validation on model 4
+
+loo_4 <- loo(m4_q7)
+loo_4
+
+```
+
+```{r model_4_loo_compare, echo = FALSE}
+
+# compare models 3 and 4 with loo cross validation
+
+loo_compare(loo_4, loo_3)
+
+```
+
+The loo cross validation and comparison suggest that the new model may be a slightly better predictor, however, the results on the model comparison are uncertain. There is also a concern for over-fitting. Nevertheless, since the coefficient on treatment is large and precise, we definitely want to keep it in the model. In terms of the less precise waits_on_platform variable, when the same model was refit without the waits on platform variable, the uncertainty in the model was essentially equivalent yet the loo cross validation estimated log score was slightly higher, indicating a worse fit. Thus, we choose to leave it in for now, especially since this predictor is relevantly connected to potential interaction with immigrants. 
+
+It is possible that the interaction of effect of waiting on the platform and receiving treatment could be an important predictor of final score. Thus, we also tried including the interaction effect of waits on platform and treatment to see if this led to better model performance:
+
+
+```{r m5_specification, include = FALSE, echo = FALSE}
+
+# fit a linear model to explain end attitude with predictors for start attitude,
+# treatment, waiting on the platform, and the interaction of treatment and
+# waiting on the platform
+
+m5_q7 <- stan_glm(end_att ~ start_att + treatment * waits_on_platform, data = data)
+
+```
+```{r m5_output, echo = FALSE}
+
+# print the model output
+
+print(m5_q7, digits = 2, comments = F)
+
+```
+
+Based on the model output, however, the inclusion of the interaction effect led to a higher degree of uncertainty as suggested by the mad_sd in waits on platform and treatment coefficients. This suggests that including the interaction may not be productive. Furthermore, the results of the loo cross validation and model fit below indicate that the estimated log score has marginally decreased and that the fit of the model without the interaction effect was better, although this was uncertain. Thus, we will stick to the model without the interaction term, as it doesn't seem to add anything. 
+
+```{r loo_m5, echo = FALSE}
+
+# perform loo cross validation for model 5
+
+loo_5 <- loo(m5_q7)
+loo_5
+
+```
+
+
+```{r loo_compare_m4_m5, echo = FALSE}
+
+# compare model 5 and model 4 using loo_compare
+
+loo_compare(loo_5, loo_4)
+```
+
+
+In the past, demographic characteristics have also been shown to be important predictors of views towards immigration. Thus, we next try adding the log_income, race, gender, and party predictors to the model specification. 
+
+```{r m6_model, include = FALSE, echo = FALSE}
+
+# fit a linear model to explain end attitude with predictors for start attitude,
+# treatment, waiting on the platform, log income, race, gender, and party 
+
+m6_q7 <- stan_glm(end_att ~ start_att + treatment + waits_on_platform + log_income + race + gender + party, data = data)
+
+```
+
+```{r m6_output, echo = FALSE}
+
+# print model 6 output
+
+print(m6_q7, digits = 3, comments = F)
+
+```
+
+Compared to our current best model, model 4, this model has a slightly lower sigma value with a comparable mad_sd. However, the error terms on many of the coefficients are large and their 95% confidence intervals contain zero. The resuls of the loo cross validation and model comparison are as follows:
+
+```{r loo_calc_m6, echo = FALSE}
+
+# perform loo cross-validation on model 6
+
+loo_6 <- loo(m6_q7)
+loo_6
+
+```
+
+Since we received a warning that one observation had a pareto_k > .7, we re-did the loo call with the argument "k_threshold = 0.7" as instructed before continuing:
+
+```{r loo_calc_m6_2, echo = FALSE}
+
+# perform loo cross-validation on model 6
+
+loo_6 <- loo(m6_q7, k_threshold = 0.7)
+loo_6
+
+```
+
+
+```{r loo_compare_m6_m4, echo = FALSE}
+
+# compare models 6 and 4 with loo_compare
+
+loo_compare(loo_6, loo_4)
+
+```
+
+The estimated log score has decreased slightly suggesting that the fit may have improved over model 4, but this is uncertain given the standard error of the result. The concern here is that the additional predictors simply introduced noise and that the new model, model 6, is simply an example of over-fitting. Due to the large mad_sd compared to the coefficient values on gender, log_income, and party, we next try the model specification without these predictors. We also try dropping the waits on platform variable at this time for the same reason. This can be further justified since the mean value of waits_on_platform is `r round(mean(data$waits_on_platform), 2)`, indicating that there is not much variation in this indicator variable anyways, so it may not have been the best candidate for a predictor to begin with.
+
+
+```{r m7_specification, include = FALSE, echo = FALSE}
+
+# fit a linear model to explain end attitude with predictors for start attitude,
+# treatment, log income, and race
+
+m7_q7 <- stan_glm(end_att ~ start_att + treatment + race, data = data)
+
+```
+
+```{r m7_output, echo = FALSE}
+
+# print m7 model output
+
+print(m7_q7, digits = 3, comments = F)
+
+```
+
+The model now seems to have improved slightly. The sigma value and its corresponding mad_sd have both fallen. Furthermore, the mad_sd terms on the intercept, start_att, and race have all fallen, indicating a higher level of certainty. The loo cross validation results are as follows:
+
+```{r loo_m7, echo = FALSE}
+
+# perform loo cross-validation for model 7
+
+loo_7 <- loo(m7_q7)
+loo_7
+
+```
+
+Comparing these loo results of this model to the previous model that included more of the coefficients yields the following:
+
+```{r loo_compare_m7_m6, echo = FALSE}
+
+# compare models 6 and 7 using loo_compare()
+
+loo_compare(loo_7, loo_6)
+
+```
+
+This suggests that the model fit of the current model may be slightly better as the estimated log score increases in the new model compared to model 6 (and the Monte Carlo SE and standard errors of elpd_loo were approximately the same when comparing the two loo outputs); however, the results are highly uncertain. Since the current model is simpler than the previous model, we will select the current model over model 6. Having weighed all of these tradeoffs, our final model is thus:
+
+y = stan_glm(end_att ~ start_att + treatment + race, data = data)
+
+The plot below presents a visual of the posterior predictive checks of the final model compared to the data. 
+
+```{r final_model_plot, echo = FALSE}
+
+# again, generate the posterior predictions and plot 100 randomly sampled
+# distributions with the actual data
+
+yrep_7 <- posterior_predict(m7_q7)
+n_sims <- nrow(yrep_7)
+subset <- sample(n_sims, 100)
+ppc_dens_overlay(data$end_att, yrep_7[subset, ]) +
+  ggtitle("Plot of 100 Predictive Replications of Replicated Data from Final Model v. the\nDistribution of the Data") +
+  xlim(-40,40)
+
+```
+
+Note: I did try using log(start_att), as this improved the fit between the first two models tested, but this increased uncertainty in most coefficients and decreased the estimated log score in the simpler models. Thus, we kept start_att as is. 
+
+# Question 8
+
+**Regression to the mean:** The idea of regression to the mean is that point predictions tend to push estimated data towards the mean and this thus reduces variation. For example, in the book the example is given of a regression regressing daughter's height on mother's height. If a mother is 2 inches shorter than the mean height and the coefficient on mother's height is less than one, then the daughter's height would be estimated at less than two inches shorter than the mean, and then her daughter's height would be estimated at being even closer to the mean in height. The important point here is that the predicted value of the daughter's height would be closer on average to the mean than the mother's height. However, we can resolve this paradox by taking into account that the actual height of the daughter will also be affected by random variation unaccounted for in a single point prediction, which cancels out this effect. Thus, the overall variation in reality should be kept constant. 
+
+When the variables are standardized in a linear regression, it is always the case that the regression line has a slope less than 1, and we thus always face the challenge of regression to the mean. As a result, this concept is relevant to our model for question 7. We could standardize the variables in the model and see that the coefficients on the predictors are less than one, as expected. However, we know that in reality, there will be random variation in the real data, which will resolve the regression to the mean paradox. We can keep this uncertainty in mind by paying attention to the error terms and visualizing the variation in predictions using the plots that we have made, which help us visualize the potential variation. 
+
+
+**Type M/S error:** Type S error describes when the sign of the estimated effect is the opposite of the sign of the true effect. Type M error descibes when the magnitude of the estimated effect is very different from the magnitude of the true effect. Both of these errors can occur even when a result is "statistically significant" and tend to increase with noise in the statistical procedure. In statistical/quantitative research, there is particular concern with Type M error because for effects to be considered statistically significant, the estimate must be at least two standard deviations away from zero, which sets a lower bound on the minimum statistically significant effect size and can create selection bias towards Type M error. Because we did not pay much attention to statistical significance, we do not have too much concern for Type M selection bias. However, it is possible that Type S error and Type M error could still be present. In our final model from question 7, we are quite certain that we will not run into Type S error, as none of the 95% confidence intervals of the coefficients contain zero; however, Type M error could still be present, especially given the relatively small sample size.
+
+
+**The garden of forking paths:** The idea of the so-called "garden of forking paths" is that there are many ways that data can be selected and analyzed in a study and that even without "fishing" or "p-hacking," or specifically choosing data and analysis to achieve a statistically significant result, a study can find and report strong, significant results from unpromising data or in the absence of a true underlying trend relatively easily. This is a potential issue in our model generation from question 7, as there were many possible model specifications we could have chosen that used or excluded different aspects of the data, and because we chose which model to use after already having seen the data. We performed multiple tests using different model specifications and tested them based on the data and tried to pick the one that had the most predictive power. However, this is not necessarily problematic because, as recommended in RAOS, we did not focus on finding the model with the best p-values or the one that was the most statistically significant, but rather the model that best fit the data taking into account and accepting the uncertainty and variation in each of the models via simulation and by assessing the predictive fit to the data. Furthermore, we were extremely transparent about our process and weighed the different decisions we thought about instead of simply presenting one result. The process of chosing the model and its results are certainly not perfect, but by taking the steps as laid out in RAOS, we helped to combat this issue.

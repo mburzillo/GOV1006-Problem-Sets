@@ -1,0 +1,360 @@
+---
+title: "GOV 1006 Pset #5"
+author: "Maria Burzillo"
+date: "3/1/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(tidyverse)
+library(rstanarm)
+library(stargazer)
+library(gt)
+library(sjPlot)
+library(kableExtra)
+```
+
+```{r data_import, include = FALSE, warning = FALSE}
+
+# import data from the folder. Ignore the warning since it is just giving a name
+# to an arbitrary column that we don't need anyways.
+
+judges_final <- read_csv("judges-data/judges_final.csv")
+
+```
+
+```{r create_tibble, include = FALSE}
+
+# create the tibble from the judges data with the variables as specified in th
+# repo. Convert all indicator and non-continuous variables to factors using
+# as.factor() for better analysis. Don't include the code in the data because we
+# don't need it and will use the data itself throughout the workbook.
+
+data <- tibble(
+  treatment = as.factor(ifelse(judges_final$girls > 0, 1, 0)),
+  lib_vote_share = judges_final$lib_vote_share,
+  girls = as.factor(judges_final$girls),
+  child = as.factor(judges_final$child),
+  republican = as.factor(judges_final$republican),
+  age = judges_final$age,
+  woman = as.factor(judges_final$woman),
+  religion = judges_final$religion,
+  race = judges_final$race)
+
+```
+# 1: The Effect of Having a Daughter on a Judge's Liberal Vote Share
+
+## a)
+```{r q1_a, include = FALSE}
+
+# do not include the model generation, since we will use the results of the
+# model and print/discuss the relevant results later.
+
+# fit a linear model using stan_glm() to estimate the effect of having a
+# daughter on a judge's liberal vote share.
+
+m1 <- stan_glm(lib_vote_share ~ treatment, data = data, refresh = 0)
+print(m1, digits = 3)
+```
+
+We can use stan_glm to fit a linear model to the data to estimate the effect of having a daughter on a judge's liberal vote share. The results are displayed in part b.
+
+## b)
+```{r q_1_a_stargazer,  results = 'asis', echo = FALSE}
+
+# create a table of the results of the model using stargazer
+
+table_1 <- stargazer(data.frame(m1),
+                     title = "The Effect of Having Daughters on Liberal Vote Share",
+                     dep.var.labels=c("Liberal Vote Share"),
+                     covariate.labels=c("Intercept", "Has Daughters"), 
+                     align = TRUE,
+                     digits = 2,
+                     type = "html")
+
+```
+
+
+## c)
+
+The model fit tells us that the intercept is `r round(coef(m1)[1], 2)` with uncertainty `r round(se(m1)[1], 2)`. This suggests that the expected liberal vote share of someone who does not have a daughter is `r round(coef(m1)[1], 2)`. 
+
+It also tells us that the coefficient on treatment, or the slope of the model is `r round(coef(m1)[2], 2)` with uncertainty `r round(se(m1)[2], 2)`. This suggests that the expected difference between a judge's liberal vote share who has daughters and a judge's liberal vote share who does not have daughters is `r round(coef(m1)[2], 2)`. 
+
+Furthermore, the residual standard deviation is `r round(sigma(m1), 2)`. This suggests that the liberal vote share as predicted by the model will be within $\displaystyle \pm \,2\, *$ `r round(sigma(m1), 2)` approximately 95% of the time. 
+
+
+
+
+# 2: The Estimated Effect of the Number of Daughters
+
+## a) The Estimated Effect of the Number of Daughters on Liberal Vote Share
+```{r q_2_a, include = FALSE}
+
+# don't include because we will create a table of the results and discuss the
+# relevant component parts.
+
+# fit a linear model using stan_glm() to estimate the incremental effect of
+# having an additional daughter on a judge's liberal vote share. Girls has been
+# cast as a factor corresponding to the number of girls a judge has.
+
+m2 <- stan_glm(lib_vote_share ~ girls, data = data, refresh = 0)
+
+
+# check the number of observations in the data with each factor level of girls
+
+data %>%
+  group_by(girls) %>%
+  count()
+
+```
+
+```{r q_2_a_table, results = "asis", echo =FALSE}
+
+# create a table of the results of the model using stargazer
+
+table_2 <- stargazer(data.frame(m2),
+                     title = "The Incremental Effect of Having Daughters on Liberal Vote Share",
+                     dep.var.labels=c("Liberal Vote Share"),
+                     covariate.labels=c("Intercept"), 
+                     align = TRUE,
+                     digits = 2,
+                     type = "html")
+
+```
+
+
+
+Our output tells us that we expect judges that have no daughters to have a liberal vote share of `r round(coef(m2)[1], 2)`, which is the intercept in our table. Below the intercept, we can see the incremental effect of additional daughters. The coefficient "girls1" tells us that we expect that a judge with one daughter will have a higher liberal vote share than a judge with no daughters by `r round(coef(m2)[2], 2)` points. The coefficient "girls2" tells us that we expect that a judge with one daughter will have a higher liberal vote share than a judge with no daughters by `r round(coef(m2)[3], 2)` points, and so forth for the coefficients "girls3", "girls4", and "girls5." In general, this suggests that judges become more liberal with each additional girl. The coefficients of "girls4" and "girls5" seem to deviate from the general trend; however, there are only 3 observations with judges having 4 girls and 2 observations with judges having 5 girls, so the extremely small sample size in those factor levels may be skewing the results. 
+
+
+
+## b) Controlling for the Effects of Children 
+
+In order to control for the potential biases due to having children of any gender on the estimated effect size of having a certain number of daughters on a judge's vote, we can add additional predictors to the model for the number of children each judge has. This will allow us to better isolate the effects of having a certain number of daughters. The results of the model are presented in the table below.
+
+```{r q_2_b, include = FALSE}
+
+# don't include because we will create a table of the results and discuss the
+# relevant component parts.
+
+# fit a linear model using stan_glm() to estimate the incremental effect of
+# having an additional daughter on a judge's liberal vote share with controls
+# for the incremental effect of having an additional child. Both girls and child
+# have been cast as a factors corresponding to the number of girls a judge has.
+
+m3 <- stan_glm(lib_vote_share ~ girls + child, data = data, refresh = 0)
+
+m3
+# check the number of observations in the data with each factor level of child
+
+data %>%
+  group_by(child) %>%
+  count()
+
+```
+
+
+
+```{r q_2_b_table, results = "asis", echo =FALSE}
+
+# create a table of the results of the model using stargazer
+
+table_3 <- stargazer(data.frame(m3),
+                     title = "The Incremental Effect of Having Daughters on Liberal Vote Share with Controls for Number of Children",
+                     dep.var.labels=c("Liberal Vote Share"),
+                     covariate.labels=c("Intercept"), 
+                     align = TRUE,
+                     digits = 2,
+                     type = "html")
+
+
+
+
+```
+
+
+The results of the model are quite complicated and difficult to understand. The intercept suggests that we would expect a judge with no daughters or children to have an average liberal vote share of `r round(coef(m3)[1],2)`. The coefficients of "girlsx" suggest that we expect a judge with x number of girls to have an increase/decrease in liberal vote share according to the mean of their respective row compared to a judge with no daughters (the default here for the variable girls) and the same number of children. So for example, the coefficient of "girls3" suggests that a judge with 3 daughters would be expected to have a liberal vote share `r round(coef(m3)[4],2)` points higher than a judge with no daughters and the same number of children. 
+
+For the coefficients "childx," the interpretation is similar. The coefficient suggests that we expect a judge with x number of children to have an increase/decrease in liberal vote share according to the mean of their respective row compared to a judge with no children (the default here for the variable children) and the same number of girls. Thus, the coefficient on "child3" suggests that a judge with 3 children is expected to have a difference in liberal vote share of `r round(coef(m3)[9],2)` compared to a judge with no children and the same number of daughters. 
+
+
+As with the previous model without controlling for the number of children, these results suggest that judges become more liberal when they have daughters. The coefficients of "girls4" and "girls5" seem to deviate from the general trend; however, there are only 3 observations with judges having 4 girls and 2 observations with judges having 5 girls, so the extremely small sample size in those factor levels may be skewing the results. The coefficients for having 1 girl, 2 girls, and 3 girls are slightly larger in this model than they were in the model not controlling for children. This further suggests that there is something specific about having daughters that can correlate with a more liberal vote share.
+
+The effect of having children in general tends to be negative. Again, the coefficients on "child7", "child8", and "child9", also seem to deviate from the trend, but there is only 1 judge in each of these categories, which is highly problematic. It would probably be better to exclude these data or to bin by the number of children in some way to avoid this. Another important note is that the 50% confidence intervals on the coefficients for having 5 children and 6 children contain 0, which sheds some uncertainty about the sign of the actual effect. These uncertainties should motivate further investigation or at least the checking of 95% confidence intervals.  
+
+
+
+## c) Controlling for Partisanship
+
+In order to investigate how a judge's partisanship mediates the effect of having daughters on the judge's vote, we can fit a model using an indicator for whether or not the judge has daughters and an indicator for whether or not the judge is a republican to explain liberal vote share. It makes sense to use the indicator variable for whether or not a judge has daughters as oppossed to the incremental factor for the number of daughters since we are more interested in looking at the effect of having any daughters on liberal vote share rather than the effect of a specific number of daughters as mediated by the partisan status in either case. After fitting the model, we can create a scatter plot of jittered points, each representing a judge, showing liberal vote share versus the indicator for having daughters. 
+
+
+```{r q_2_c, include = FALSE}
+
+# don't include because we will create a graph of the results and discuss the
+# relevant component parts.
+
+# in order to investigate the effect of a judge's having daughter or not
+# mediated by their partisanship, we can add a control for partisanship,
+# republican, which is a factor indicating whether a judge is a republican or
+# not, to our original model. It makes sense to use the indicator variable
+# treatment rather than the factor variable girls since we are more interested
+# in looking at the effect of having any daughters on liberal vote share rather
+# than the effect of a specific number of daughters as mediated by the partisan
+# status in either case. Thus, we can fit a linear model using stan_glm() to
+# estimate the effect of having a daughter on a judge's liberal vote share with
+# controls for partisan status.
+
+m4 <- stan_glm(lib_vote_share ~ treatment + republican , data = data, refresh = 0)
+
+```
+
+
+```{r q_2_graphic, echo = FALSE}
+
+# include the graphic only, not the code
+
+# create a scatter plot of the liberal vote share verses the indicator of having
+# girls. Add jitter to help perceive the actual number of points, since the x
+# variable is binary and the points otherwise overlap/are hard to see. Add
+# ablines to display the regression lines for republicans and non-republicans
+# based on the model coefficients from m4.
+
+
+data %>%
+  ggplot(aes(x = treatment, y = lib_vote_share)) +
+  geom_jitter(aes(color = republican), height = .1, width = .15) +
+  geom_abline(slope = coef(m4)[2], intercept = coef(m4)[1], color = "blue") +
+    geom_abline(slope = coef(m4)[2], intercept = coef(m4)[1] + coef(m4)[3], color = "red") +
+  ggtitle("Liberal Vote Share of Judges Plotted Againsttheir Number of\nDaughters with Regression Lines for Republicans and Non-Republicans") +
+  scale_color_manual(values=c("blue", "red")) +
+  xlab("Number of Daughters") +
+  ylab("Liberal Vote Share") +
+  labs(color = "Republican") +
+  theme_bw()
+  
+```
+
+From the plot, we can see that the intercept for non-republican judges is `r round(coef(m4)[1],2)` and the intercept for republican judges is `r round(coef(m4)[1] + coef(m4)[3],2)`. This means that republican judges without daughters are expected to have a liberal vote share of `r round(coef(m4)[1] + coef(m4)[3],2)` on average and that non-republican judges are expected to have a liberal vote share of `r round(coef(m4)[1],2)` on average. For both republican and non-republican judges, the estimated effect of having daughters, or the slope of the regression line is `r round(coef(m4)[2],2)`, suggesting that the liberal vote share of a judge with a daughter is `r round(coef(m4)[2],2)` higher than an equivalent judge without one. 
+
+# 3: Control Variables and Interaction Effects 
+
+```{r q_3_model, include = FALSE}
+
+# don't include because we will create a table of the results and discuss the
+# relevant component parts.
+
+# fit a linear model using stan_glm() to estimate the effect of the interaction
+# effect of having daughters and being a woman on a judge's liberal vote share
+
+m5 <- stan_glm(lib_vote_share ~ treatment * woman, data = data, refresh = 0)
+print(m5, digits = 3)
+```
+
+
+
+```{r q_3_table, results = "asis", echo=FALSE}
+
+# display only the table and not the code
+
+# create a table of the results of the model using stargazer
+
+table_4 <- stargazer(data.frame(m5),
+                     title = "The Effect of Having Daughters, Being a Woman,\nand their Interaction on Liberal Vote Share",
+                     dep.var.labels=c("Liberal Vote Share"),
+                     covariate.labels=c("Intercept", "Has Daughters", "Is Woman", "Has Daughters x Is Woman"), 
+                     align = TRUE,
+                     digits = 3,
+                     type = "html")
+```
+
+
+The intercept of this model suggests that a non-woman with no daughters is expected to have a liberal vote share of `r round(coef(m5)[1], 3)` on average. The coefficient on having daughters suggests that the expected difference between a non-woman judge who has daughters and a non-woman judge who does not is `r round(coef(m5)[2], 3)`. Similarly, the coefficient on being a woman suggests that the expected difference between a female judge with no daughters and a non-woman judge with no daughters is `r round(coef(m5)[3], 3)`. Finally, the coefficient on the interaction of having daughters and being a woman is `r round(coef(m5)[4], 3)`, which suggests that having a daughter and being a woman leads to an expected difference of `r round(coef(m5)[4], 3)` points in liberal vote share compared to a judge not being a woman and not having daughters. The residual standard deviaton term, sigma, in the model suggests that actual liberal vote share will be within ${\displaystyle \pm }$ `r round(sigma(m5), 3)` points of the linear predictor 68% of the time.  
+
+```{r checking_model_fitting, include = FALSE}
+
+# don't include the code for this, relevant results will be pulled out and
+# discussed.
+
+# start by assuming that all the parameters from the model are true
+
+a <- coef(m5)[1]
+b_treatment <- coef(m5)[2]
+b_woman <- coef(m5)[3]
+b_interaction <- coef(m5)[4]
+sigma <- sigma(m5)
+x_treatment <- as.integer(data$treatment)
+x_woman <- as.integer(data$woman)
+n <- length(x_treatment)
+error <- rnorm(n, 0, sigma)
+
+# simulate the fake data
+
+y <- a + b_treatment * x_treatment + b_woman * x_woman + b_interaction * x_treatment * x_woman + error
+
+# store the fake data in a dataframe with the predictors
+
+fake <- data.frame(x_treatment, x_woman, y)
+
+# fit a model explaining the outcome by the interaction of the predictors, as in
+# our original model.
+
+m_fake <- stan_glm(y ~ x_treatment * x_woman, data = fake, refresh = 0)
+
+```
+
+```{r checking_model_fitting_table, results = "asis", echo = FALSE}
+
+# include only the table, not the code
+
+table_5 <- stargazer(data.frame(m_fake),
+                     title = "Model Fit with Fake Data Simulation",
+                     dep.var.labels=c("Liberal Vote Share"),
+                     covariate.labels=c("Intercept", "Has Daughters", "Is Woman", "Has Daughters x Is Woman"), 
+                     align = TRUE,
+                     digits = 3,
+                     type = "html")
+
+```
+
+Comparing the model coefficients from the assumed true values from the original regression and simulated data, the fit seems reasonable. The assumed "true" coefficients for the intercept, having daughters, being a woman, and the interaction term are all within the margin of error, falling within their 68% and 95% confidence intervals for the fake simulation coefficients. If we wanted to test the model fit more robustly, we could embed this simulation and modeling in a for-loop to test if the "true" value falls within the 68% confidence interval approximately 68% of the time and within the 95% confidence interval 95% of the time over many simulations. 
+
+
+# 4. Simulated Confidence Intervals 
+
+```{r q_4, include = FALSE}
+
+# don't include the code for this, relevant results will be pulled out and
+# discussed.
+
+# extract the simulations generated during the stan_glm call from the model
+
+sims <- as.matrix(m1)
+
+# from the simulations, get the 95% confidence interval for intercept
+
+intercept_ci <- quantile(sims[,1],c(.025, .975))
+
+# from the simulations, get the 95% confidence interval for treatment
+
+treatment_ci <- quantile(sims[,2],c(.025, .975))
+
+# calculate the min and the max for each of the confidence intervals for
+# inserting into the write-up
+
+min_intercept_ci <- coef(m1)[1] - 2 * se(m1)[1]
+max_intercept_ci <- coef(m1)[1] + 2 * se(m1)[1]
+
+min_treatment_ci <- coef(m1)[2] - 2 * se(m1)[2]
+max_treatment_ci <- coef(m1)[2] + 2 * se(m1)[2]
+
+```
+
+Using the simulated data from the model generated in question 1, we can construct 95% confidence intervals for the intercept and treatment coeficients. We find that the confidence interval for the intercept is (`r round(intercept_ci, 2)`) and the confidence interval for the treatment is (`r round(treatment_ci,2)`).
+
+These confidence intervals represent the range within which the true value of the desired parameter is expected to be contained 95% of the time on average. For example, this means that the interval (`r round(intercept_ci, 2)`) has a 95% chance of containing the true intercept. Similarly, the interval (`r round(treatment_ci,2)`) has an approximately 95% chance of containing the true treatment coefficient.
+
+We can compare the calculated confidence intervals to the approximation of the confidence intervals using the median and mad sd from the original model fitting. In our original fitted model, the intercept coefficient had value `r round(coef(m1)[1],2)` with mad sd `r round(se(m1)[1],2)`. This would yield an estimated 95% confidence interval of `r round(coef(m1)[1],2)` $\displaystyle \pm \,2\, *$ `r round(se(m1)[1],2)`, or (`r round(min_intercept_ci,2)`,`r round(max_intercept_ci,2)`). Similarly, in our original fitted model, the treatment coefficient had the value `r round(coef(m1)[2],2)` with mad sd `r round(se(m1)[2],2)`. This would yield an estimated 95% confidence interval of `r round(coef(m1)[2],2)` $\displaystyle \pm \,2\, *$ `r round(se(m1)[2],2)`, or (`r round(min_treatment_ci,2)`,`r round(max_treatment_ci,2)`). These approximations are very similar to our confidence intervals calculated from the simulations. Interestingly, both the confidence intervals estimated for the treatment coefficient contain zero, which suggests that the sign of the effect is unclear. 

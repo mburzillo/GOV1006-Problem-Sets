@@ -1,0 +1,496 @@
+---
+title: 'GOV 1006 Problem Set #3'
+author: "Maria Burzillo"
+date: "2/18/2020"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+
+# don't include because simply setup
+
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readr)
+```
+
+# 1
+
+## a)
+
+A 95% confidence interval represents a range for a quantity or parameter of interest such that if repeated trials or applications were performed, the confidence interval would include the true value of the quantity or parameter 95% of the time. In this scenario, we can interpret the friend's confidence interval to mean that if they repeated their experiment 100 times, we would expect the hormone level increase to be between 5% and 305% in 95 trials.
+
+## b)
+
+We should be concerned about type M errors. Type M errors occur when there is a large difference in magnitude between the estimated effect and the true effect. Type M errors are particularly concerning because there is selection bias in terms of statistical significance in favor of statistical estimates that are more likely to have Type M error. This occurs because in order for a result to be considered statistically significant, it must have an absolute value of at least twice the standard error. Thus, when standard error is large, the value must be large, and there is thus a minimum bound on estimate effect size. The very large magnitude of the upper bound in this example indicates that there might be concern that there is a Type M error associated with this analysis. 
+
+
+
+## c)
+
+I am skeptical of the 95% confidence interval because it has such a large range, with the upper bound of 305% having such a large magnitude. This could be indicative of Type M error, and I would want to know more about the analyses performed and data collection in order to see if there was something going on that might lead to an exaggerated estimate of the treatment effect. Additionally, the fact that their null hypothesis was 0 effect is potentially problematic, because even very small treatment effects (such as .001) would thus count towards rejecting the null in favor of the hypothesis that power posing "significantly" increases hormone levels. 
+
+
+# 2
+
+## a)
+
+MAD stands for the median absolute deviation. For median M from a set of simulations $z_1,...,z_n$, this can be represented as:
+
+$$
+MAD = median_{i=1}^{n}|z_i-M|
+$$
+Similarly, the MAD SD can be caclulated by:
+
+$$
+MAD \ SD = 1.483 * median_{i=1}^{n}|z_i-M| = 1.483 * MAD
+$$
+
+
+## b)
+
+Since we are accustomed to working with standard deviations, we often rescale the MAD by 1.483 to find the MAD SD. This reproduces the standard error in the special case of the normal distribution and can be thought of as a more stable measure of the variation. 
+
+## c)
+
+The basic procedure of bootstrapping is as follows: 
+
+1) sample a dataset with replacement a large number of times
+2) calculate a statistic from each sample
+3) find the standard deviation or other summaries of the distribution of the statistic from each sample
+
+A limitation of this procedure is that the original dataset is extremely important since it is being resampled again and again. Thus, it is important that the data was collected carefully and is as reflective of the population as possible and that shortcomings or problems with the dataset are taken into account and acknowledged. 
+
+# 3
+
+```{r g_3, echo=FALSE}
+
+# PLAYER 1
+
+# set the number of shots taken in each iteration and the number of total trial
+# iterations
+
+reps = 100
+trials = 1000
+
+
+# define the probabilities of taking a two pointer or a three pointer for player 1
+
+p_1_2pt <- .7
+p_1_3pt <- .3
+
+# define the probability of making a two pointer or three pointer for player 1
+
+p_1_score_2pt <- .48
+p_1_score_3pt <- .41
+
+# initialize vectors to store the total points and the shot type
+
+points <- rep(NA, 100)
+shot_type <- rep(NA, 100)
+
+# simulate shot type for 100 repetitions based on the probabilities of player
+# attempting a two pointer or a three pointer
+
+shot_type <- sample(c("two-point", "three-point"), size = 100, replace = TRUE, prob = c(p_1_2pt, p_1_3pt))
+
+# initialize vectors to store the total number of points scored in each of the
+# iterations and the points scored per shot in each iteration
+
+all_points_per_shot <- rep(NA, 1000)
+all_points_p1 <- rep(NA, 1000)
+
+# create a for loop that for each of the trials, simulates 100 shots in which
+# for each shot it takes a random draw from a binomial distribution with the
+# approporiate probability, given that the shot is a two-pointer or a
+# three-pointer, multiplies it by the points if they make the shot, and adds the
+# simulated points to a vector of points for every attempt. For each trial of
+# 100 shots, the for loop also adds the sum of the total number of points scored
+# and the points per shot to two vectors storing this information for all 1000
+# trials.
+
+for (m in 1: trials){
+  for (i in 1:reps){
+    if(shot_type[i] == "two-point"){
+      points[i] <- 2 * rbinom(1,1, p_1_score_2pt)
+    }
+    else if(shot_type[i] == "three-point"){
+      points[i] <- 3 * rbinom(1,1,p_1_score_3pt)
+    }
+  }
+all_points_p1[m] = sum(points)
+all_points_per_shot[m] = sum(points)/reps
+}
+
+# calculate statistics of the distribution
+
+avg_points_per_shot_100_p1 <- sum(all_points_per_shot)/trials
+avg_points_per_shot_100_p1_confidence <- quantile(all_points_per_shot, c(.025, .975))
+mean_total_points_p1 <- mean(all_points_p1)
+p1_confidence_100 <- quantile(all_points_per_shot, c(.025, .975))
+points_confidence_p1 <- quantile(all_points_p1, c(.025, .975))
+
+
+```
+
+
+```{r player_2, echo = FALSE}
+
+# set the number of shots taken in each iteration and the number of total trial
+# iterations
+
+reps = 100
+trials = 1000
+
+# define the probabilities of taking a two pointer or a three pointer for player 2
+
+p_2_2pt <- 0
+p_2_3pt <- 1
+
+# define the probabilit of making a two pointer or three pointer for player 2
+p_2_score_3pt <- NA
+p_2_score_3pt <- .4
+
+# initialize vectors to store the total points and the shot type
+
+points <- rep(NA, 100)
+shot_type <- rep(NA, 100)
+
+# simulate shot type for 100 repetitions based on the probabilities of player
+# attempting a two pointer or a three pointer
+
+shot_type <- sample(c("two-point", "three-point"), size = 100, replace = TRUE, prob = c(p_2_2pt, p_2_3pt))
+
+# initialize vectors to store the total number of points scored in each of the
+# iterations and the points scored per shot in each iteration
+
+all_points_p2 <- rep(NA, 1000)
+all_points_per_shot_2 <- rep(NA, 1000)
+
+# run the same for loop for player 2
+
+for (m in 1: trials){
+  for (i in 1:reps){
+    if(shot_type[i] == "two-point"){
+      points[i] <- 2 * rbinom(1,1, p_2_score_2pt)
+    }
+    else if(shot_type[i] == "three-point"){
+      points[i] <- 3 * rbinom(1,1,p_2_score_3pt)
+    }
+  }
+all_points_p2[m] = sum(points)  
+all_points_per_shot_2[m] = sum(points)/reps
+}
+
+# calculate statistics of the distribution
+
+points_confidence_p2 <- quantile(all_points_p2, c(.025, .975))
+mean_total_points_p2 <- mean(all_points_p2)
+all_points_p2 <- quantile(all_points_p2, c(.025, .975))
+player_2_confidence_100 <- quantile(all_points_per_shot_2, c(.025, .975))
+avg_points_per_shot_100_p2 <- sum(all_points_per_shot_2)/trials
+```
+
+## a)
+
+Using a replicated simulation approach, we can compare player 1 and player 2 by performing 1000 replications of 100 shots to come up with a distribution for each for the total number of points scored from 100 shots. For player 1, the mean number of points scored per 100 shots is `r round(mean_total_points_p1,2)` with a 95% credible interval of (`r points_confidence_p1`), and for player 2, the mean is `r round(mean_total_points_p2,2)` with the 95% credible interval (`r points_confidence_p2`). Because the credible intervals are overlapping, we cannot be totally confident that player 2 is "better" in terms of total points scored than player 1, as this suggests that the difference between the means is not statistically significant.  
+
+## b)
+
+
+```{r q_3_1000_p1, echo = FALSE}
+
+# PLAYER 1
+
+# set the number of shots taken in each iteration and the number of total trial
+# iterations
+
+reps = 1000
+trials = 1000
+
+# define the probabilities of taking a two pointer or a three pointer for player 1
+
+p_1_2pt <- .7
+p_1_3pt <- .3
+
+# define the probabilit of making a two pointer or three pointer for player 1
+
+p_1_score_2pt <- .48
+p_1_score_3pt <- .41
+
+# initialize vectors to store the total points and the shot type
+
+points <- rep(NA, 100)
+shot_type <- rep(NA, 100)
+
+# simulate shot type for 100 repetitions based on the probabilities of player
+# attempting a two pointer or a three pointer
+
+shot_type <- sample(c("two-point", "three-point"), size = 1000, replace = TRUE, prob = c(p_1_2pt, p_1_3pt))
+
+# initialize vectors to store the total number of points scored in each of the
+# iterations and the points scored per shot in each iteration
+
+all_points_per_shot <- rep(NA, 1000)
+all_points_p1 <- rep(NA, 1000)
+
+# create a for loop that for each of the trials, simulates 100 shots in which
+# for each shot it takes a random draw from a binomial distribution with the
+# approporiate probability, given that the shot is a two-pointer or a
+# three-pointer, multiplies it by the points if they make the shot, and adds the
+# simulated points to a vector of points for every attempt. For each trial of
+# 100 shots, the for loop also adds the sum of the total number of points scored
+# and the points per shot to two vectors storing this information for all 1000
+# trials.
+
+for (m in 1: trials){
+  for (i in 1:reps){
+    if(shot_type[i] == "two-point"){
+      points[i] <- 2 * rbinom(1,1, p_1_score_2pt)
+    }
+    else if(shot_type[i] == "three-point"){
+      points[i] <- 3 * rbinom(1,1,p_1_score_3pt)
+    }
+  }
+all_points_p1[m] = sum(points)
+all_points_per_shot[m] = sum(points)/reps
+}
+
+# calculate statistics of the distribution
+
+avg_points_per_shot_1000_p1 <- sum(all_points_per_shot)/trials
+mean_total_points_p1_1000 <- mean(all_points_p1)
+avg_points_per_shot_1000_p1_confidence <- quantile(all_points_per_shot, c(.025, .975))
+points_confidence_p1_1000 <- quantile(all_points_p1, c(.025, .975))
+
+
+```
+
+
+```{r q3_1000_player_2, echo = FALSE}
+
+# don't include because just calculations
+
+# set the number of shots taken in each iteration and the number of total trial
+# iterations
+
+reps = 1000
+trials = 1000
+
+# define the probabilities of taking a two pointer or a three pointer for player 2
+
+p_2_2pt <- 0
+p_2_3pt <- 1
+
+# define the probabilit of making a two pointer or three pointer for player 2
+p_2_score_3pt <- NA
+p_2_score_3pt <- .4
+
+# initialize vectors to store the total points and the shot type
+
+points <- rep(NA, 100)
+shot_type <- rep(NA, 100)
+
+# simulate shot type for 100 repetitions based on the probabilities of player
+# attempting a two pointer or a three pointer
+
+shot_type <- sample(c("two-point", "three-point"), size = 1000, replace = TRUE, prob = c(p_2_2pt, p_2_3pt))
+
+# initialize vectors to store the total number of points scored in each of the
+# iterations and the points scored per shot in each iteration
+
+all_points_p2 <- rep(NA, 1000)
+all_points_per_shot_2 <- rep(NA, 1000)
+
+# run the same for loop for player 2
+
+for (m in 1: trials){
+  for (i in 1:reps){
+    if(shot_type[i] == "two-point"){
+      points[i] <- 2 * rbinom(1,1, p_2_score_2pt)
+    }
+    else if(shot_type[i] == "three-point"){
+      points[i] <- 3 * rbinom(1,1,p_2_score_3pt)
+    }
+  }
+all_points_p2[m] = sum(points)  
+all_points_per_shot_2[m] = sum(points)/reps
+}
+
+# calculate statistics of the distribution
+
+points_confidence_p2_1000 <- quantile(all_points_p2, c(.025, .975))
+mean_total_points_p2_1000 <- mean(all_points_p2)
+all_points_p2_1000 <- quantile(all_points_p2, c(.025, .975))
+player_2_confidence_1000 <- quantile(all_points_per_shot_2, c(.025, .975))
+avg_points_per_shot_1000_p2 <- sum(all_points_per_shot_2)/trials
+```
+
+Using a replicated simulation approach, we can compare player 1 and player 2 by performing 1000 replications of 100 shots to come up with a distribution for each for the total number of points scored from 100 shots. For player 1, the mean number of points scored per 100 shots is `r round(mean_total_points_p1_1000,2)` with credible interval of total points scored is (`r points_confidence_p1_1000`) and for player 2, the mean is `r round(mean_total_points_p2_1000,2)` with the credible interval (`r points_confidence_p2_1000`). Because the credible intervals are overlapping, we cannot be totally confident that player 2 is "better" in terms of total points scored than player 1, as this suggests that the difference between the means is not statistically significant. [ Note that in some cases, running the entire code did lead to totally separae intervals, even if only by .01. In this case, the interpretation would be that because the credible intervals are technically not overlapping, we can now be more confident that player two is "better" in terms of the number of points scored from 100 shots. However, these instances were rare and suggest a further degree of uncertainty and a potential need for further replications or tests.]
+
+# c)
+
+For the trials of 100 shots each, the expected number of points per possession for player 1 is `r round(avg_points_per_shot_100_p1, 2)` with the 95% credible region of (`r avg_points_per_shot_100_p1_confidence`) and for player 2 it is `r round(avg_points_per_shot_100_p2,2)` with credible region (`r player_2_confidence_100`). 
+
+For the trials of 1000 shots each, the expected number of points per possession for player 1 is `r round(avg_points_per_shot_1000_p1,2)` with the 95% credible region of (`r avg_points_per_shot_1000_p1_confidence`) and for player 2 it is `r round(avg_points_per_shot_1000_p2,2)` with credible region (`r player_2_confidence_1000`).
+
+Since all of these credible regions are once again overlapping, we once again cannot be totally confident that player 2 is "better" in terms of total points scored per posession than player 1, as this suggests that the result is not statistically significant. However, the consistent results over the simulations of the higher mean number of points for player 2 and the higher bound's of player 2's credible regions suggest that player 2 is likely the "better" player overall. 
+
+# 4
+
+```{r 4_import_data, include = FALSE}
+
+# don't import because just data import
+
+po_godmode <- read_csv("po_godmode.csv")
+gov_data <- po_godmode
+
+```
+
+## a)
+
+### 1.
+```{r Y_0, echo = FALSE}
+
+# make histograms of distribution of potential donations of the control group by
+# partisan and non-partisan status
+
+gov_data %>%
+  ggplot(aes(x = Y_0, fill = factor(X))) +
+  geom_histogram(alpha = .5, binwidth = 2) +
+  ggtitle("Distribution of Potential Donations of the Control Group\nby Partisan and Non-Partisan Status ") +
+  scale_fill_discrete(name = "Status", labels = c("Non-Partisan", "Partisan")) +
+  theme_bw()
+
+```
+
+
+### 2.
+```{r Y_1, echo = FALSE}
+
+# make histograms of distribution of potential donations of the treatment group by
+# partisan and non-partisan status
+
+gov_data %>%
+  ggplot(aes(x = Y_1, fill = factor(X))) +
+  geom_histogram(alpha = .5, binwidth = 2)+
+  ggtitle("Distribution of Potential Donations of the Treatment Group\nby Partisan and Non-Partisan Status ") +
+  scale_fill_discrete(name = "Status", labels = c("Non-Partisan", "Partisan")) +
+  theme_bw()
+
+```
+
+
+### 3.
+```{r Y_1-Y_0, echo = FALSE}
+
+# make histograms of distribution the treatment effect by partisan and
+# non-partisan status
+
+gov_data %>%
+  ggplot(aes(x = Y_1-Y_0, fill = factor(X))) +
+  geom_histogram(alpha = .5, binwidth = 2)+
+  ggtitle("Distribution of Treatment Effect by Partisan\nand Non-Partisan Status ") +
+  scale_fill_discrete(name = "Status", labels = c("Non-Partisan", "Partisan")) +
+  theme_bw()
+
+```
+
+
+## b)
+
+In the first histogram, we examine the distribution of Y_0, the potential donation if not treated with face-to-face canvassing conditional on whether or not the donor is a partisan (X = 1) or not (X = 0). We can see from the separation of the histograms for X = 1 and X = 0 that expected potential donation differs based on whether or not the donor is a partisan. In general, the expected donation of a partisan is greater than the expected donation of a non-partisan when neither receive the treatment of face-to-face canvassing. However, the overlapping nature of the histograms indicates that we cannot be sure about the statement that the expected donation of a partisan will be higher than the expected donation of a non-partisan when neither receive the treatment.
+
+In the second histogram, we examine the distribution of Y_1, the potential donation if the individual is treated with face-to-face canvassing conditional on whether or not the donor is a partisan (X = 1) or not (X = 0). For both groups, the expected donation (the center of the distribution) is higher than in the control group, which suggests that face-to-face canvassing has a positive effect on expected donation. There is also a wider range of potential donations for both partisans and non-partisans, suggesting that there is substantial variation in the treatment effects on individuals in both groups. There is still quite a bit of overlap in the distributions, though, and so we cannot be certain that the expected donation of a partisan will be higher than the expected donation of a non-partisan when both receive the treatment.
+
+In the final graph, we plot the histogram of the treatment effect (Y_1-Y_0), which represents the expected change in donation due to the face-to-face canvassing. The center of the distribution has a larger value for the partisan group than for the non-partisan group, which suggests that the treatment effect is larger for partisans than non-partisans. However, the distributions here overlap the most out of any of the distributions so far, and the partisan distribution appears to cover the entire range of the non-partisan distribution. This suggests that we cannot really say with certainty that we expect the donation of a partisan to increase more in response to treatment than the donation of a non-partisan would. 
+
+## c)
+
+```{r calculations_4c, echo=FALSE}
+
+# don't include because just calculations
+# calculate the number of partisans and non-partisans and their relative
+# percentages in the populations
+
+n_partisan = sum(gov_data$X)
+n_non_partisan = nrow(gov_data) - n_partisan
+p_partisan = n_partisan/nrow(gov_data)
+p_non_partisan = n_non_partisan/nrow(gov_data)
+  
+
+```
+
+
+While they may appear similar at first, the two assignments described are actually quite different. In the alternative process, exactly three-fourths of all partisan donors in the population will be assigned treatment and one-tenth of the non-partisan donors will be assigned treatment. If the experiment were to be repeated on the same populaiton, the number of partisans assigned and the number of non-partisans assigned would not change. On the other hand, the Bernoulli drawing assigment method introduces a degree of variability. There is no guarantee that the final treatment group will contain partisans in proportion to the 75% chance of their getting assigned treatment and no guarantee that it will contain non-partisans in proportion to the 10% change of their getting assigned treatment. While the probabilities of partisans and non-partisans getting assigned treatment in the Bernoulli draws would not change across repeated experiments, the actual group make-up varies because of the probabalistic process used to assign the treatment. 
+
+For both processes, the probability of individual $i$ being assigned treatment is:
+
+$\pi_i = .75 * p(X_i = 1) + .1 *  p(X_i = 0)$
+
+Where $p(X_i = 1)$ represents the probability that an individual is a partisan and $p(X_i = 0)$ represents the probability that an individual is not a partisan.
+Since we consider the units in the data to be the full population of interest, these probabilies can be determed by their percent representation in the data ( probability of being a partisan: `r p_partisan`, probability of being a non partisan: `r p_non_partisan`) so that:
+
+$\pi_i = .75 * .481 + .1 *  .519 = .41$
+
+The identical probabilities of assignment of individual $i$ to treatment reflect the fact that on average, the partisan individuals will be assigned to the treatment group 75% of the time and non-partisans 10% of the time in the Bernoulli drawing. Thus, as the number of the experiments increases, the mean percentage of partisans and non-partisans assigned treatment will approach 75% and 10% respectively by the law of large numbers. 
+
+```{r treatment_assignment, echo=FALSE}
+
+# initialize a vector equal to the length of gov_data to hold the treatment assignments
+
+di = rep(NA, nrow(gov_data))
+
+
+# for each row in the gov_data dataset, if X_i = 1 and the individual is
+# partisan, assign a treatment effect for the individual to the vector di by
+# making a random draw from the bernoulli distribution with probability yes of
+# .75. Otherwise, if X_i = 0, assign a treatment effect for the individual to
+# the vector di by making a random draw from the bernoulli distribution with
+# probability yes of .1
+
+for (i in 1:nrow(gov_data)){
+  if (gov_data$X[i] == 1){
+    di[i] = rbernoulli(1, .75)
+  }
+  else if (gov_data$X[i] == 0){
+    di[i] = rbernoulli(1, .1)
+  }
+}
+
+# Modify the gov_data dataset to add the di vector as a new column. Calculate
+# the treatment effect, treatment effect for the treated, and treatment effect
+# for the control. To distinguish between treatment and control, multiply by the
+# treatment dummy variable.
+
+gov_data_2 <- gov_data %>%
+  mutate(di = di,
+         TE = Y_1 - Y_0,
+         TT = di * (Y_1 - Y_0),
+         TC = (1-di) * (Y_1 - Y_0))
+
+
+# modify the di column so that 0 values are matched to NA so that they do not
+# affect the averages of the treatment effects.
+
+gov_data_2$TT[di == FALSE] <- NA
+gov_data_2$TC[di == TRUE] <- NA
+
+# calculate the means of the ATE, ATC, AND ATT
+
+ATE = mean(gov_data_2$TE)
+ATT = mean(gov_data_2$TT, na.rm = TRUE)
+ATC = mean(gov_data_2$TC, na.rm = TRUE)
+
+
+```
+
+## d)
+
+Under the treatment vector I've generated, the average treatment effect (ATE) is equal to `r round(ATE,2)`. This is the mean of the treatment effects from the entire population. The average treatment effect among the control group (ATC) is `r round(ATC,2)`, which is the mean of the treatment effects from the members of the control group. Finally, the average treatment effect among the treated (ATT) is  `r round(ATT,2)`. Here, we "calculate" the ATE, ATC, and ATT rather than "estimate" them because we know the outcome variable Y for each individual in both states of receiving and not receiving treatment. Thus, we can overcome the fundamental problem of causal inference, where it is in reality impossible to know the causal effect of a single unit, since the unit can only be assigned into treatment OR control. In most cases, we will have to simply estimate ATE, ATC, and ATT for these reasons. 
+
+
+# Collaborators
+Cris P.
+
+

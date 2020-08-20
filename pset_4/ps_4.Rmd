@@ -1,0 +1,360 @@
+---
+title: 'GOV 1006 Pset #4'
+author: "Maria Burzillo"
+date: "2/25/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(tidyverse)
+library(rstanarm)
+```
+
+
+```{r import_data, include = FALSE, warning = FALSE}
+
+# don't include code because just loading the data
+
+# don't include warning message about the missing column name. This column is
+# just a unique identifier for the data, but it is missing a variable name. R is
+# adding a name "X1" for the data, which is fine. It is also coercing the
+# variable types for some of the variables to character where they are
+# non-numeric. This warning does not indicate a broader problem.
+
+# load the dataset from the train-data directory
+
+pnas_data <- read_csv("train-data/pnas_data.csv")
+
+```
+
+```{r create_tibble, include = FALSE}
+
+# Create a tibble using the pnas_data dataset based on the specifications in the
+# html assignment. Save the dataset as "data."
+
+# do not include this code in the html output, as it is just another part of set-up
+
+data <- tibble(
+  treatment = pnas_data$treatment,
+  att_start = pnas_data$numberim.x + pnas_data$Remain.x + pnas_data$Englishlan.x,
+  att_end = pnas_data$numberim.y + pnas_data$Remain.y + pnas_data$Englishlan.y,
+  att_chg = att_end - att_start,
+  income = pnas_data$income.new,
+  liberal = pnas_data$liberal,
+  republican = pnas_data$republican,
+  age = pnas_data$age,
+  male = pnas_data$male
+)
+
+# filter out data to get rid of any rows containing NAs in att_change
+
+data <- data %>%
+  filter(!(is.na(att_chg)))
+
+```
+# 1. A Linear Model using Age to Explain Income
+```{r model_fit_1, include = FALSE}
+
+# Fit a linear model to the data using stan_glm() that uses age to explain
+# income. Print the results of the model.
+
+# don't include code in the html because we will pull values from the fit to
+# explain them
+
+fit_1 <- stan_glm(income ~ age, data = data, refresh = 0)
+print(fit_1)
+```
+
+
+```{r extract_q1_params, include = FALSE}
+
+# don't include code for extractions from model in html because underlying calculations
+# that will be presented in text write-up
+
+# extract relevant coefficients/parameter estimates from the model
+
+intercept <- prettyNum(round(coef(fit_1)[1], 0),  big.mark = ",")
+age <- prettyNum(round(coef(fit_1)[2], 0), big.mark = ",")
+uncertainty_intercept <- prettyNum(round(se(fit_1)[1], 0), big.mark = ",")
+uncertainty_slope <- prettyNum(round(se(fit_1)[2], 0), big.mark = ",")
+
+sigma <- prettyNum(round(sigma(fit_1)[1], 0), big.mark = ",")
+two_sigma <- prettyNum(round(2 * sigma(fit_1)[1], 0), big.mark = ",")
+
+```
+
+Here, we generated a linear model that uses age to explain differences in income in the dataset. The estimated intercept is \$`r intercept` with uncertainty (as represented by mad sd) of \$`r uncertainty_intercept`. This can be interpreted to mean that the predicted income of a 20 year old is \$`r intercept`. The estimated slope of the regression line is \$`r age`/year with uncertainty $`r uncertainty_slope` (as represented by mad sd). This slope can be interpreted as follows: if we compare two people who are one year different in age, the average difference between the individual that is one year older and the individual that is one year younger is \$`r age`. 
+
+The residual standard deviation is \$`r sigma` with uncertainty as represented by mad sd. This indicates that income will be within \$`r sigma` of the linear predcictor (mean value for the simulated data) for about 68% of the data points and will be within $\pm$ 2*\$`r sigma` or $\pm$ \$`r two_sigma` (two residual standard deviations) of the linear predictor approximately 95% of the time. 
+
+
+```{r q1_R2_Calc, include=FALSE}
+
+# calculate R2, the proportion of variance explained by the model
+
+# don't include code because we will pull out relevant outputs in the explanation
+
+R2 <- 1 - (sigma(fit_1)/sd(data$income))^2
+
+percent_R2 <- R2 * 100
+
+```
+The R2 value of `r round(R2, 4)` suggests that the model only explains `r round(percent_R2, 2)`% of the variance in the income level for these data. This makes sense because there are many likely more important factors in a person's income such as education level, occupation type, or race. Below, we can visualize the model fit and the data on a simple scatter plot:
+
+```{r plot_q1, echo=FALSE}
+
+# echo = FALSE so we only see the graph, not the underylying code
+
+# plot the data and regression line to visualize results
+
+data %>%
+  ggplot(aes(x = age, y = income)) +
+  geom_point() +
+  geom_abline(slope = coef(fit_1)[2], intercept = coef(fit_1)[1], color = "red") +
+  ggtitle("Income as a Function of Age with stan_glm Regression Line") +
+  theme_bw()
+
+```
+
+# 2. Assessing the Relationship Between Treatment Assignment and Changes in Attitudes Toward Immigration
+
+```{r q2_linear_model_fit, include = FALSE}
+
+# fit a linear model using stan_glm which uses treatment to explain attitude
+# change. Print the fit.
+
+# don't include since we will pull out relevant components in the explanation
+
+fit_2 <- stan_glm(att_chg ~ treatment, data = data, refresh = 0)
+print(fit_2)
+```
+
+```{r, params_q2, include = FALSE}
+
+# don't include code for extractions from model in html because underlying calculations
+# that will be presented in text write-up
+
+# extract relevant coefficients/parameter estimates from the model
+
+intercept <- prettyNum(round(coef(fit_2)[1], 2),  big.mark = ",")
+age <- prettyNum(round(coef(fit_2)[2], 2), big.mark = ",")
+uncertainty_intercept <- prettyNum(round(se(fit_2)[1], 2), big.mark = ",")
+uncertainty_slope <- prettyNum(round(se(fit_2)[2], 2), big.mark = ",")
+
+sigma <- prettyNum(round(sigma(fit_2)[1], 2), big.mark = ",")
+two_sigma <- prettyNum(round(2 * sigma(fit_2)[1], 2), big.mark = ",")
+```
+
+
+Here, we fit another linear model which uses treatment to explain changes in attitudes towards immigrants. The estimated intercept is `r intercept` with an uncertainty of `r uncertainty_intercept`. This can be interpreted to mean that when an individual does not receive treatment, the average change in attitude is `r intercept`, indicating `r intercept` point change in the raw sum of the 3 variables measuring attitudes towards immigration, indicating a shift towards supporting pro-immigrant initiatives. The estimated slope of the regression line is `r age` with uncertainty of `r uncertainty_slope`. This suggests that under the fitted model, the average difference in score measuring attitudes towards immigration comparing those receiving the treatment and those not receiving the treatment is `r age`, indicating a negative relationship between the treatment and support for pro-immigrant initiatives. 
+
+The residual standard deviation is `r sigma` with uncertainty quantified by mad sd. This indicates that the change in attitude will be within `r sigma`  points of the linear predcictor (mean value for the simulated data) for about 68% of the data points and will be within $\pm$ 2* `r sigma`  or $\pm$ `r two_sigma` (two residual standard deviations) of the linear predictor approximately 95% of the time. 
+
+```{r q2_R2, include = FALSE}
+
+# calculate R2, the proportion of variance explained by the model
+
+# don't include the code here because we will pull out the R2 in the
+# explanation.
+
+R2 <- round(1 - (sigma(fit_2)/sd(data$att_chg))^2, 2)
+percent_R2 = round((1 - (sigma(fit_2)/sd(data$att_chg))^2) * 100, 2)
+  
+```
+
+The R2 value of `r R2` suggests that the model only explains `r percent_R2`% of the variance in the change in attitude for these data. While this is much higher than the amount of variance explained in question 1, this is still quite low, indicating that there are likely additional important factors that are being left out of the model.Below, we can visualize the model fit and the data on a simple scatter plot:
+
+```{r q2_plot, echo=FALSE}
+
+# only show the graph, not the underlying code
+
+# plot the data and regression line to visualize results
+
+data %>%
+  ggplot(aes(x = treatment, y = att_chg)) +
+  geom_point() +
+  geom_abline(slope = coef(fit_2)[2], intercept = coef(fit_2)[1], color = "red") +
+  ggtitle("Attitude Change as a Function of Treatment with stan_glm Regression Line") +
+  theme_bw()
+```
+
+
+```{r q_3_data_sim, include = FALSE}
+
+# don't include this in the html, since important results are pulled out and
+# discussed later on
+
+# assume the parameter values from the model are true
+
+a <- -.4
+b <- .8
+sigma <- 1.4
+x <- data$treatment
+n <- length(x)
+
+
+# simulate the fake data: create a vector y of fake data corresponding to each
+# predictor x and combine x and y in a data frame. To simulate the error term,
+# we assume that errors are drawn from the normal distribution with mean 0 and
+# standard deviation sigma taken from the previous model.
+
+y <- a + b * x + rnorm(n, 0, sigma)
+fake <- data.frame(x,y)
+
+
+# fit the model using the fake data
+
+fit_3 <- stan_glm(y ~ x, data = fake, refresh = 0)
+print(fit_3)
+
+```
+
+```{r q_3_comparing_results, include=FALSE}
+
+# don't include this in the html, since important results are pulled out and
+# discussed later on 
+
+# define our coefficients for the intercept and standard error as our estimated
+# coefficients from the previous model
+
+b_hat <- round(coef(fit_3)["x"], 2)
+b_se <- round(se(fit_3)["x"], 2)
+
+a_hat <- round(coef(fit_3)[1], 2)
+a_se <- round(se(fit_3)[1], 2)
+
+# create variables equal to TRUE if the confidence interval contains the true
+# value and FLASE if it does not for 68% and 95% confidence intervals
+
+cover_68_b <- abs(b - b_hat) < b_se
+cover_95_b <- abs(b - b_hat) < 2 * b_se
+
+cover_68_a <- abs(a - a_hat) < a_se
+cover_95_a <- abs(a - a_hat) < 2 * a_se
+
+
+```
+We can now check the model fitting procedure using fake-data simulation. Essentially, we assume the parameter values that we have just estimated from our model are true, and we use them to generate new data, when we then perform a regression on to see if the new parameter values are similar to the originally estimated parameters,  `r intercept` and `r age`, which we assumed to be true. The new model estimates the slope coefficient of `r b_hat`, which is relatively close to the assumed value `r b`, suggesting that the fit is reasonable as the estimated coefficient is within the margin of error. Additionally, the value for the intercept is estimated as `r a_hat`, which is also close to the assumed value of `r a` and is within the 68% and 95% confidence intervals. This provides evidence that the model fit is pretty good.
+
+However, we can be more sure about the accuracy of the fit by also checking that the confidence intervals have the correct coverage probabilities over a large number of model iterations as opposed to just one. We can now do this by simulating the sampling distribution and computing the coverage of the confidence interval using a for loop. 
+
+```{r increasing_sims, include = FALSE}
+
+# don't include this in the html, since important results are pulled out and
+# discussed later on
+
+# creat a variable called n_fake to store th enumber of iterations for the for
+# loop. Initialize cover_98 and cover_95, vectors to store whether or not the
+# true parameter is contained within the confidence interval in each iteration.
+
+n_fake <- 100
+cover_68 <- rep(NA, n_fake)
+cover_95 <- rep(NA, n_fake)
+
+
+# this for loop generates random data with the error term distributed normally
+# for each predictor, x. Then it combines x and y into one data frame and fits a
+# linear model to the data using stan_glm. The for loop then extracts the
+# relevant parameters, tests whether the true value falls within the confidence
+# interval, and records this as "TRUE" or "FALSE" by replacing an NA in the
+# vectors cover_68 and cover_95 in the correct order.
+
+for (s in 1:n_fake){
+  y <- a + b*x + rnorm(n, 0, sigma)
+  fake <- data.frame(x,y)
+  fit <- stan_glm(y ~ x, data = fake, refresh = 0)
+  b_hat <- coef(fit)["x"]
+  b_se <- se(fit)["x"]
+  cover_68[s] <- abs(b - b_hat) < b_se
+  cover_95[s] <- abs(b - b_hat) < 2 * b_se
+}
+
+cov_68_percent = 100 * mean(cover_68)
+cov_95_percent = 100 * mean(cover_95)
+
+```
+
+
+```{r trying_t_dist, include = FALSE}
+
+# don't include this in the html, since important results are pulled out and
+# discussed later on
+
+# Try the same exact process but this time with a t distribution because only 115 points:
+
+n_fake <- 100
+cover_68_t <- rep(NA, n_fake)
+cover_95_t <- rep(NA, n_fake)
+t_68 <- qt(.84, n - 2)
+t_95 <- qt(.975, n - 2)
+
+for (s in 1:n_fake){
+  y <- a + b*x + rnorm(n, 0, sigma)
+  fake <- data.frame(x,y)
+  fit <- stan_glm(y ~ x, data = fake, refresh = 0)
+  b_hat <- coef(fit)["x"]
+  b_se <- se(fit)["x"]
+  cover_68_t[s] <- abs(b - b_hat) < t_68 * b_se
+  cover_95_t[s] <- abs(b - b_hat) < t_95 * b_se
+}
+
+```
+
+
+After iterating over the for loop `r n_fake` times, we can say that the simulation gives that `r round(cov_68_percent, 2)` of the 68% intervals and `r round(cov_95_percent, 2)` of the 95% intervals contain the true parameter values. Thus, from this analysis we can say that the simulation gives the desired result that approximately 68% of the 68% intervals and approximately 95% of the 95% intervals contain the true parameter values. If we had run 1000 or more simulations instead of 100, it is likely that these coverage percentages would be even closer to 68% and 95%.
+
+
+# 4. Estimating the Mean Differnce v. Regressing on an Indicator Variable
+
+```{r regressing_on_the_indicator_variable, include=FALSE}
+
+# don't need to include this in the html since all relevant info is pulled out
+# later.
+
+# fit the linear model once again to see how treatment explains attitude change.
+# Set the prior intercept, prior, and the prior distribution of the auxiliary
+# parameter to 0 NULL (mandate a flat prior) so we can just see how the
+# difference in the means is the same as regressing on the indicator variable.
+
+fit_4 <- stan_glm(att_chg ~ treatment, data = data, prior_intercept = NULL, prior = NULL, prior_aux = NULL, refresh = 0)
+print(fit_4)
+
+
+# define the predicted slope coefficient and standard error from the simulation
+# method
+
+predicted_sim_slope <- round(coef(fit_4)["treatment"], 2)
+predicted_sim_se <- round(se(fit_4)["treatment"], 2)
+
+
+
+# find the difference in the means by subtracting the mean attitude change of
+# all the individuals from the treatment group from the mean attitude change of
+# all of the individuals from the control group.
+
+diff <- round(mean(data$att_chg[data$treatment == 1]) -  mean(data$att_chg[data$treatment == 0]),2)
+
+
+# calculate standard error by calculating the standard error of attitude change
+# for the control and treatment groups
+
+se_0 <- sd(data$att_chg[data$treatment == 0])/sqrt(length(data$att_chg[data$treatment == 0]))
+se_1 <- sd(data$att_chg[data$treatment == 1])/sqrt(length(data$att_chg[data$treatment == 1]))
+se <- round(sqrt(se_0^2 + se_1^2),2)
+
+```
+
+Our results show that estimating the mean difference between the treatment and control is the same as regressing on an indicator variable. When we regressed on the indicator variable in this example, we obtained a slope of `r predicted_sim_slope` with uncertainty `r predicted_sim_se`. When we calculated the mean difference, we obtained a value of `r diff` with uncertainty `r se`. The standard errors may be slightly different due to the fact that the regression model estimates a single residual standard deviation parameter compared to the calculation of the standard error in the difference calculation based on the separate values for standard error in the control group and the treatment group.
+
+
+
+# 5. Confidence Intervals, Uncertainty Intervals, and Compatibility Intervals
+
+A confidence interval is the range of values of a parameter or quantity of interest such that repeated runs of the model will contain the true value a specified percentage of the time. For example, a 95% confidence interval will contain the true value of the parameter or quantity of interest an expected 95% of the time. Uncertainty intervals are concerned with how uncertain the estimate itself is. Finally, a compatibility interval is the range of parameter values most consistent and compatible with the data. 
+
+
+# Collaborators:
+
+None

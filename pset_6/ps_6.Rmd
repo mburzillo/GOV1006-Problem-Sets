@@ -1,0 +1,305 @@
+---
+title: "GOV 1006 Problem Set 6"
+author: "Maria Burzillo"
+date: "4/7/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(tidyverse)
+library(rstanarm)
+library(permutations)
+library(broom)
+```
+
+
+```{r load_data, include = FALSE}
+
+# load data
+
+X2016_voter_survey <- read_csv("2016_voter_survey.csv")
+
+```
+
+# Question 1
+
+## a)
+
+Before we run any models, we first filter the data to include only observations such that the presidential vote in 2012 was either for Romney or Obama and the presidential vote in 2016 was either for Clinton or Trump.
+
+```{r data_cleaning, include = FALSE}
+
+# create vectors of relative candidates in election years
+
+candidates_2012 <- c("Mitt Romney", "Barack Obama")
+candidates_2016 <- c("Hillary Clinton", "Donald Trump")
+
+# filter the dataset to only include 
+
+voters <- X2016_voter_survey %>%
+  filter(pres_vote_2012 %in% candidates_2012, pres_vote_2016 %in% candidates_2016)
+
+# create an indicator variable for presidential vote to indicate whether a
+# person voted for Donald Trump (1) or Clinton (0)
+
+voters$indicator_pres_vote_2016 <- ifelse(voters$pres_vote_2016 == "Hillary Clinton", 0, 1)
+
+```
+
+## b)
+
+```{r model_1_b, include = FALSE}
+
+# estimate a model which uses presidential vote in 2012 to predict presidential
+# vote in 2016
+
+m_1_b <- stan_glm(indicator_pres_vote_2016 ~ pres_vote_2012, family = "binomial", data = voters)
+
+```
+
+```{r model_1_b_print, echo = FALSE}
+
+# print the model output
+
+print(m_1_b, digits = 2)
+
+```
+
+
+
+```{r m_1_b_coeff, include = FALSE}
+
+m_1_b_coef <- tidy(m_1_b)  %>%
+  pull("estimate")
+
+m_1_b_madsd <- tidy(m_1_b) %>%
+  pull("std.error")
+
+p_obama_trump <- plogis(m_1_b_coef[1])
+
+romney_trump <- m_1_b_coef[1] + m_1_b_coef[2]
+
+p_romney_trump <- plogis(m_1_b_coef[1] + m_1_b_coef[2])
+
+p_romney_coef <- plogis(m_1_b_coef[2])
+
+```
+
+The simple print out of the model can be interpreted as follows. The intercept term corresponds to the logit probability of a voter who voted for Obama in 2012 voting for Trump in 2016, which is `r round(m_1_b_coef[1],2)` with a mad_sd value of `r round(m_1_b_madsd[1],2)` . This can be interpreted much more easily by converting to the probability scale, which yields a coefficient of `r round(p_obama_trump,2)`, which means that the probability of a voter who voted for Obama in 2012 voting for Trump in 2016 is `r round(p_obama_trump,2)`.
+
+The coefficient on the factor variable indicating that a voter voted for Romney in 2012 indicates the expected difference in probability of voting for Trump in 2016 between a voter who voted for Romney and a voter who voted for Obama. As it is currently reported, this suggests that voting for Romney instead of Obama corresponds to a positive difference of `r round(m_1_b_coef[2],2)` in the logit probability of voting for Trump with a mad_sd value of `r round(m_1_b_madsd[2],2)`. On the probability scale, this is a difference in probability of `r round(p_romney_coef,3)`. 
+
+```{r m_1_b_summary, echo = FALSE}
+
+summary(m_1_b, digits = 2)
+
+```
+Further looking at the model summary gives us some additional information. For example, we can see 10th and 90th percentiles of the coefficient estimates. We can also see from the sd value that the confidence intervals on the estimates do not contain zero. Since the mad_sd values on both the intercept and the coefficient are also very low, this indicates a relatively high degree of certainty in these estimates. 
+
+## c)
+
+```{r 1_prob_conversions, include = FALSE}
+
+# convert coefficient results to probability scale
+
+plogis(m_1_b_coef[1] + m_1_b_coef[2])
+
+
+plogis(m_1_b_coef[1])
+
+```
+
+
+Given that a voter voted for Obama in 2012, the probability that they voted for Donald Trump in 2016 is `r round(p_obama_trump,2)`, as explained above. 
+
+Because we know the expected difference in the logit probability of voting for Trump between someone who voted for Obama and someone who voted for Romney from the coefficient in our model, we can also calculate the probability of a voter voting for Trump given that they voted for Romney. Our model suggests that voting for Romney instead of Obama corresponds to a positive difference of `r round(m_1_b_coef[2],2)` in the logit probability of voting for Trump. Since we know that the logit probability of voting for Trump conditional of voting for Obama is `r round(m_1_b_coef[1],2)`, we can add these coefficients together to calculate the expected logit probability of a voter who voted for Romeny voting for Trump to be `r round(m_1_b_coef[1] + m_1_b_coef[2], 2)`, or `r round(p_romney_trump, 2)` converting to the probability scale. 
+
+
+# Question 2
+
+## a)
+
+```{r m2_run, include = FALSE}
+
+# create a model that uses age to predict voting outcome in the 2016 election
+
+m_2 <- stan_glm(indicator_pres_vote_2016 ~ age, family = "binomial", data = voters)
+
+```
+
+```{r m2_summary, echo = FALSE}
+
+# summarize the model results 
+
+summary(m_2, digits = 3, comments = FALSE)
+
+```
+
+```{r m2_coef, include = FALSE}
+
+# pull the coefficients of the estimates from the model results
+
+coef_m_2 <- tidy(m_2) %>% 
+  pull("estimate")
+
+# apply the divide by 4 rule on the age coefficient
+
+age_divide <- coef_m_2[2] / 4
+
+# compare the divide by 4 to the plogis() of the same coefficient
+
+p_age <- plogis(coef_m_2[2])
+```
+
+We can interpret the coefficient here using the divide by 4 rule. Dividing the coefficient on age by 4 yields `r round(age_divide, 4)`. This suggests that a difference of one year in age leads to a maximum increase of `r round(age_divide, 4)` in the probability of voting for Trump. However, taking the inverse logistic function of the coefficient to convert to probability yields `r round(p_age, 2)`, which, very differently, suggests that a difference of one year in age leads to an increase in probability of voting for Trump by `r round(p_age, 2)` per year. This does not make sense, as this would imply that a 2 or more year difference would lead to an expected increase of more than 1 on a probability scale. It may be that because the coefficient is so low in terms of logit probability, that the transformation here is somehow warping the result. Ideally, we should dig into this more as the divide by 4 rule should approximate the conversion to probability scale using plogis() near the midpoint of the logistic curve where the probabilities are close to .5. 
+
+## b)
+
+```{r m2_medians, include = FALSE}
+
+# create the new dataframe
+
+new_data <- data.frame(age = c(75, 25))
+
+# use posterior_linpred to create a vector of predictions
+
+new_data_predictions <- posterior_linpred(m_2, transform = TRUE, newdata = new_data)
+
+# find the median of the predictions for age 75 and 25
+
+median_75 <- median(new_data_predictions[,1])
+median_25 <- median(new_data_predictions[,2])
+
+# find the difference between the medians 
+
+likelihood_difference <- round(median_75 - median_25, 2)
+
+```
+
+Based on our posterior prediction, the median likelihood of a 25 year old individual voting for Trump is expected to be `r round(median_25, 2)` and the median likelihood of a 75 year old individual voting for Trump is expected to be `r round(median_75, 2)`. Thus, the predicted difference in the likelihood of voting for Trump is `r likelihood_difference` between 75 year olds and 25 year olds.
+
+# Question 3
+
+## a)
+
+Currently, the income variable is in U.S. dollars. This may be an issue when interpreting the coefficient of the model because it would give us information about the change in probability of voting for Trump corresponding to a change in one dollar of income, which is not very meaningful. Thus, it is more helpful to examine income in terms of tens of thousands of dollars. 
+
+```{r 3_income_mutate, include = FALSE}
+
+# mutate the voters dataset to add a variable for income in 10ks
+
+voters$income_10k <- voters$income / 10000
+
+```
+
+
+## b)
+
+```{r m3_model, include = FALSE}
+
+# create a model that uses age and income in tens of thousands to predict vote
+# in the 2016 election
+
+m3 <- stan_glm(indicator_pres_vote_2016 ~ age + income_10k, family = "binomial", data = voters)
+
+```
+
+
+```{r m3_summary, echo = FALSE}
+
+# summarize the model
+
+summary(m3, digits = 4)
+
+```
+
+```{r m3_coef, include = FALSE}
+
+# pull out the estimate coefficients from the model
+
+m3_coef <- tidy(m3)  %>%
+  pull("estimate")
+
+# calculate the divide by 4 rule and the plogis() for the age coefficient
+# estimate
+
+coef_age <- m3_coef[2]
+p_age <- plogis(coef_age)
+age_d4 <- round(coef_age / 4, 4)
+
+# calculate the divide by 4 rule and the plogis() for the income coefficient
+# estimate
+
+coef_income <- m3_coef[3]
+p_income <- plogis(coef_income)
+income_d4 <- round(coef_income / 4,4)
+
+```
+
+
+The coefficient on age in the model is `r round(coef_age,4)`. This suggests that a one year difference in age corresponds to an increase of `r round(coef_age, 4)` in logit probability of voting for Trump. We can use the divide by four rule to estimate this same relationship on the probability scale. Dividing by four yields the value `r age_d4`, which suggests that a one year difference in age corresponds to an increase in the probability of voting for Trump of `r age_d4`.
+
+The coefficient of income in the model is `r round(coef_income, 4)`. This suggests that \$10,000 difference in income corresponds to an increase in the logit probability of voting for Trump of `r round(coef_income, 4)`. Using the divide by four rule, we get the value of `r income_d4`, which suggests that a \$10,000 increase in income corresponds to a `r income_d4` increase in the probability of voting for Trump. 
+
+## c)
+
+```{r m3_predictions_probabilities, include = FALSE}
+
+# create the new dataframe
+
+new_data_3 <- data.frame(age = c(75, 25),
+                       income_10k = c(130, 40))
+
+# predict for the new data using posterior_linpred()
+
+new_data_predictions_3 <- posterior_linpred(m3, transform = TRUE, newdata = new_data_3)
+
+# calculating the difference in median predictions
+
+median3_75 <- median(new_data_predictions_3[,1])
+median3_25 <- median(new_data_predictions_3[,2])
+
+median_difference_3 <- round(median3_75 - median3_25, 2)
+
+
+```
+
+```{r m3_predictions_likelihoods, include = FALSE}
+
+# predict likelihoods for the new data using posterior_linpred()
+
+l_new_data_predictions_3 <- posterior_linpred(m3, transform = FALSE, newdata = new_data_3)
+
+# calculating the difference in median predictions
+
+l_median3_75 <- median(l_new_data_predictions_3[,1])
+l_median3_25 <- median(l_new_data_predictions_3[,2])
+
+l_median_difference_3 <- round(l_median3_75 - l_median3_25, 2)
+
+
+```
+
+
+```{r plot_predictions, echo = FALSE}
+
+# use ggplot to plot the distributions of the predictions from
+# posterior_linpred() for the new data
+
+ggplot() +
+  geom_histogram(aes(x = new_data_predictions_3[,1]), fill = "blue", alpha = .5, binwidth = .01) +
+  geom_histogram(aes(x = new_data_predictions_3[,2]), fill = "orange", alpha = .5, binwidth = .01) +
+  ggtitle("Histogram of Posterior Predictions") +
+  xlab("Predicted Probability of Voting for Trump") +
+  ylab("Count") +
+  labs(subtitle = "The Posterior Predicted Probability of Voting for Trump for 25 year olds Making 40k (orange)\nand 75 year olds Making 130k (blue)") +
+  theme_bw()
+
+```
+
+The median prediction for the probability of a 25 year old making \$40,000 a year voting for Trump is `r round(median3_25, 2)` (likelihood of `r round(l_median3_25,2)`), while the median prediction of the probability of a 75 year old making \$130,000 a year voting for Trump is `r round(median3_75,2)` (likelihood `r round(l_median3_75,2)`). Thus, the difference in the median predictions is `r median_difference_3`, indicating that a 75 year old making \$130,000 a year is \%`r 100* median_difference_3` more likely to vote for Trump than a 25 year old making \$40,000. 
+
+
+This median difference is bigger than the median difference of `r likelihood_difference` calculated when the new data only included age. This likely indicates that income is also an important predictor of voting patterns and that perhaps the sepcific combinations of low income and younger age and high income and older age make a significant difference, although the interaction effect should be specifically tested in another model.
