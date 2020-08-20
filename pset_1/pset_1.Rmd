@@ -1,0 +1,186 @@
+---
+title: "pset_!"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(lubridate)
+```
+```{r download_file, include=FALSE}
+download.file(url = "https://www.davidkane.info/post/2020-01-26-harvard-concentration-data/concentration.xlsx", destfile = "concentration.xlsx", mode = "wb")
+
+```
+
+```{r cars}
+# download
+# skip first row
+# make share to explain the error message here, need to do this because when we load in the file, it automatically repairs the names and we need to rename the columns 
+concentration_1_ <- read_excel("concentration.xlsx", 
+    col_types = c("text", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric"), 
+    skip = 1) %>%
+  remove_empty(which = c("rows", "cols")) %>%
+  clean_names()
+
+
+#  and then manually put in the year
+names(concentration_1_) <- c("field_of_study", "m_2009-2010", "f_2009-2010", "subt_2009-2010", "m_2010-2011", "f_2010-2011", "subt_2010-2011",' m_2011-2012', "f_2011-2012", "subt_2011-2012", "m_2012-2013", "f_2012-2013", "subt_2012-2013", "m_2013-2014", "f_2013-2014", "subt_2013-2014", "m_2014-2015", "f_2014-2015", "subt_2014-2015", "m_2015-2016"," f_2015-2016", "subt_2015-2016", "m_2016-2017", "f_2016-2017", "subt_2016-2017"," m_2017-2018", "f_2017-2018", "subt_2017-2018", "m_2018-2019", "f_2018-2019", "subt_2018-2019", "m_2019-2020", "f_2019-2020", "subt_2019-2020")
+
+
+
+concentration <- concentration_1_ %>%
+  pivot_longer(c("m_2009-2010", "f_2009-2010", "subt_2009-2010", "m_2010-2011", "f_2010-2011",
+                 "subt_2010-2011",' m_2011-2012', "f_2011-2012", "subt_2011-2012",
+                 "m_2012-2013", "f_2012-2013", "subt_2012-2013", "m_2013-2014", "f_2013-2014",
+                 "subt_2013-2014", "m_2014-2015", "f_2014-2015", "subt_2014-2015",
+                 "m_2015-2016"," f_2015-2016", "subt_2015-2016", "m_2016-2017", "f_2016-2017",
+                 "subt_2016-2017"," m_2017-2018", "f_2017-2018", "subt_2017-2018",
+                 "m_2018-2019", "f_2018-2019", "subt_2018-2019", "m_2019-2020", "f_2019-2020", 
+                 "subt_2019-2020"), names_to = "gender_year", values_to = "count") %>%
+  separate(gender_year, into = c("group_year", "drop_it"), sep = -5) %>%
+  separate(group_year, into = c("group", "_year"), sep = -5) %>%
+  separate(`_year`, into = c("drop", "year")) %>%
+  select(-drop, -drop_it) %>%
+  mutate(year = as.numeric(year)) %>%
+  mutate(group = trimws(group))
+
+
+non_concentrations <- c("TOTALS", "Hum Div", "Sci Div", "SEAS Div", "SocSci Div", "LS", "M&PS")
+
+concentration %>%
+  group_by(field_of_study, group) %>%
+  summarise(total_count = sum(count, na.rm = T))
+
+
+concentration %>%
+  filter(!(field_of_study %in% non_concentrations)) %>%
+  ggplot() +
+  geom_point(aes(x = year, y = count, color = field_of_study), stat = "identity") +
+  geom_path(aes(x = year, y = count, color = field_of_study)) +
+  facet_grid(~group) +
+  theme(legend.position = "none")
+
+concentration %>%
+  filter(!(field_of_study %in% non_concentrations), group != "subt") %>%
+  ggplot() +
+  geom_bar(aes(x = year, y = count, fill = field_of_study,  color = field_of_study), stat = "identity") +
+  theme(legend.position = "none")
+
+
+
+
+```
+
+```{r sophomores}
+concentration_so <- read_excel("concentration.xlsx", 
+    sheet = "SO Only", skip = 1)  %>%
+  remove_empty(which = c("rows", "cols")) %>%
+  clean_names() 
+
+colnames(concentration_so)
+
+names(concentration_so) <- c("field_of_study", "division","m_2010-2011", "f_2010-2011", "subt_2010-2011",' m_2011-2012', "f_2011-2012", "subt_2011-2012", "m_2012-2013", "f_2012-2013", "subt_2012-2013", "m_2013-2014", "f_2013-2014", "subt_2013-2014", "m_2014-2015", "f_2014-2015", "subt_2014-2015", "m_2015-2016"," f_2015-2016", "subt_2015-2016", "m_2016-2017", "f_2016-2017", "subt_2016-2017"," m_2017-2018", "f_2017-2018", "subt_2017-2018", "m_2018-2019", "f_2018-2019", "subt_2018-2019", "m_2019-2020", "f_2019-2020", "subt_2019-2020")
+
+concentration_so <- concentration_so %>%
+  pivot_longer(c( "m_2010-2011", "f_2010-2011", "subt_2010-2011",' m_2011-2012', "f_2011-2012", "subt_2011-2012", "m_2012-2013", "f_2012-2013", "subt_2012-2013", "m_2013-2014", "f_2013-2014", "subt_2013-2014", "m_2014-2015", "f_2014-2015", "subt_2014-2015", "m_2015-2016"," f_2015-2016", "subt_2015-2016", "m_2016-2017", "f_2016-2017", "subt_2016-2017"," m_2017-2018", "f_2017-2018", "subt_2017-2018", "m_2018-2019", "f_2018-2019", "subt_2018-2019", "m_2019-2020", "f_2019-2020", "subt_2019-2020"), names_to = "gender_year", values_to = "count") %>%
+  separate(gender_year, into = c("gender_year", "drop_it"), sep = -5)  %>%
+  separate(gender_year, into = c("gender", "year"), sep = -4) %>%
+  separate(gender, into = c("gender", "to_drop"), sep = -1) %>%
+  select(-to_drop, -drop_it) %>%
+  mutate(gender = trimws(gender)) %>%
+  mutate(year = as.integer(year)) %>%
+  filter(!(is.na(field_of_study)))
+
+
+
+```
+
+```{r soph_plots}
+so_con <- concentration_so
+
+so_con %>%
+  #filter out the bottom row of the dataset that represented year totals in each group
+  filter(!(is.na(field_of_study)), gender != "subt") %>%
+  group_by(gender, year, division) %>%
+  summarise(total_count = sum(count, na.rm = T)) %>%
+  ggplot() +
+  geom_bar(aes(x = year, y = total_count, fill = division), stat = "identity", position = "dodge") +
+  facet_grid(~gender)
+
+
+so_con %>%
+  #filter out the bottom row of the dataset that represented year totals in each group
+  filter(!(is.na(field_of_study)), gender != "subt") %>%
+  group_by(gender, year, division) %>%
+  summarise(total_count = sum(count, na.rm = T)) %>%
+  ggplot() +
+  geom_point(aes(x = year, y = total_count, color = division), stat = "identity") +
+  geom_path(aes(x = year, y = total_count, color = division), stat = "identity") +
+  facet_wrap(~gender)
+
+
+so_con %>%
+  #filter out the bottom row of the dataset that represented year totals in each group
+  filter(!(is.na(field_of_study)), gender != "subt") %>%
+  group_by(gender, year, division) %>%
+  summarise(total_count = sum(count, na.rm = T)) %>%
+  ggplot() +
+  geom_area(aes(x = year, y = total_count, color = division, fill = division)) +
+  facet_grid(~gender)
+
+
+so_con %>%
+  #filter out the bottom row of the dataset that represented year totals in each group
+  filter(!(is.na(field_of_study)), gender != "subt") %>%
+  group_by(gender, year, field_of_study) %>%
+  summarise(total_count = sum(count, na.rm = T)) %>%
+  ggplot() +
+  geom_path(aes(x = year, y = total_count, 
+                color = field_of_study)) +
+  facet_grid(~gender) + 
+  theme(legend.position = "none")
+
+# find the top ten concentrations of all time by total number of students
+top_10_con <- so_con %>%
+  group_by(field_of_study) %>%
+  summarise(total_count = sum(count, na.rm = T)) %>%
+  arrange(-total_count) %>%
+  head(10)
+
+# find all of the entries from entire dataset with these concentrations
+top_10_data <- inner_join(top_10_con, so_con)
+
+top_10_data %>%
+  #filter out the bottom row of the dataset that represented year totals in each group
+  filter(gender != "subt") %>%
+  group_by(gender, year, division) %>%
+  summarise(total_count = sum(count, na.rm = T)) %>%
+  ggplot() +
+  geom_area(aes(x = year, y = total_count, color = division, fill = division)) +
+  facet_grid(~gender)
+
+
+# QUESTION: WHAT CONCENTRATIONS HAVE THE LARGEST DIFFERENCE BETWEEN MALES AND FEMALES? HAS THIS CHANGED OVER TIME? 
+
+top_10_data
+
+
+
+```
